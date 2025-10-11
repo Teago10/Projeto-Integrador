@@ -34,12 +34,12 @@
             cuidadorToolStripMenuItem = new ToolStripMenuItem();
             disponibilidadeToolStripMenuItem = new ToolStripMenuItem();
             pacienteToolStripMenuItem = new ToolStripMenuItem();
+            avaliaçãoToolStripMenuItem = new ToolStripMenuItem();
             atendimentoToolStripMenuItem = new ToolStripMenuItem();
             plantãoToolStripMenuItem = new ToolStripMenuItem();
             consultarPlantãoToolStripMenuItem = new ToolStripMenuItem();
             sistemaToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
-            avaliaçãoToolStripMenuItem = new ToolStripMenuItem();
             menuSistemaCadastro.SuspendLayout();
             SuspendLayout();
             // 
@@ -84,6 +84,12 @@
             pacienteToolStripMenuItem.Size = new Size(180, 22);
             pacienteToolStripMenuItem.Text = "Paciente";
             // 
+            // avaliaçãoToolStripMenuItem
+            // 
+            avaliaçãoToolStripMenuItem.Name = "avaliaçãoToolStripMenuItem";
+            avaliaçãoToolStripMenuItem.Size = new Size(180, 22);
+            avaliaçãoToolStripMenuItem.Text = "Avaliação";
+            // 
             // atendimentoToolStripMenuItem
             // 
             atendimentoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { plantãoToolStripMenuItem, consultarPlantãoToolStripMenuItem });
@@ -115,12 +121,7 @@
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(180, 22);
             sairToolStripMenuItem.Text = "Sair";
-            // 
-            // avaliaçãoToolStripMenuItem
-            // 
-            avaliaçãoToolStripMenuItem.Name = "avaliaçãoToolStripMenuItem";
-            avaliaçãoToolStripMenuItem.Size = new Size(180, 22);
-            avaliaçãoToolStripMenuItem.Text = "Avaliação";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // FrmSistemaCadastro
             // 
