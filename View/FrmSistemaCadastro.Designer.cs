@@ -40,6 +40,7 @@
             consultarPlantãoToolStripMenuItem = new ToolStripMenuItem();
             sistemaToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
+            btnTeste = new Button();
             menuSistemaCadastro.SuspendLayout();
             SuspendLayout();
             // 
@@ -62,14 +63,14 @@
             // responsavelToolStripMenuItem
             // 
             responsavelToolStripMenuItem.Name = "responsavelToolStripMenuItem";
-            responsavelToolStripMenuItem.Size = new Size(180, 22);
+            responsavelToolStripMenuItem.Size = new Size(139, 22);
             responsavelToolStripMenuItem.Text = "Responsável";
             // 
             // cuidadorToolStripMenuItem
             // 
             cuidadorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { disponibilidadeToolStripMenuItem });
             cuidadorToolStripMenuItem.Name = "cuidadorToolStripMenuItem";
-            cuidadorToolStripMenuItem.Size = new Size(180, 22);
+            cuidadorToolStripMenuItem.Size = new Size(139, 22);
             cuidadorToolStripMenuItem.Text = "Cuidador";
             // 
             // disponibilidadeToolStripMenuItem
@@ -81,13 +82,13 @@
             // pacienteToolStripMenuItem
             // 
             pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
-            pacienteToolStripMenuItem.Size = new Size(180, 22);
+            pacienteToolStripMenuItem.Size = new Size(139, 22);
             pacienteToolStripMenuItem.Text = "Paciente";
             // 
             // avaliaçãoToolStripMenuItem
             // 
             avaliaçãoToolStripMenuItem.Name = "avaliaçãoToolStripMenuItem";
-            avaliaçãoToolStripMenuItem.Size = new Size(180, 22);
+            avaliaçãoToolStripMenuItem.Size = new Size(139, 22);
             avaliaçãoToolStripMenuItem.Text = "Avaliação";
             // 
             // atendimentoToolStripMenuItem
@@ -100,13 +101,13 @@
             // plantãoToolStripMenuItem
             // 
             plantãoToolStripMenuItem.Name = "plantãoToolStripMenuItem";
-            plantãoToolStripMenuItem.Size = new Size(180, 22);
+            plantãoToolStripMenuItem.Size = new Size(168, 22);
             plantãoToolStripMenuItem.Text = "Agendar Plantão";
             // 
             // consultarPlantãoToolStripMenuItem
             // 
             consultarPlantãoToolStripMenuItem.Name = "consultarPlantãoToolStripMenuItem";
-            consultarPlantãoToolStripMenuItem.Size = new Size(180, 22);
+            consultarPlantãoToolStripMenuItem.Size = new Size(168, 22);
             consultarPlantãoToolStripMenuItem.Text = "Consultar Plantão";
             // 
             // sistemaToolStripMenuItem
@@ -119,15 +120,26 @@
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(180, 22);
+            sairToolStripMenuItem.Size = new Size(93, 22);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
+            // 
+            // btnTeste
+            // 
+            btnTeste.Location = new Point(648, 408);
+            btnTeste.Name = "btnTeste";
+            btnTeste.Size = new Size(112, 23);
+            btnTeste.TabIndex = 1;
+            btnTeste.Text = "Teste de Conexão";
+            btnTeste.UseVisualStyleBackColor = true;
+            btnTeste.Click += btnTeste_Click;
             // 
             // FrmSistemaCadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 465);
+            Controls.Add(btnTeste);
             Controls.Add(menuSistemaCadastro);
             MainMenuStrip = menuSistemaCadastro;
             Name = "FrmSistemaCadastro";
@@ -152,5 +164,6 @@
         private ToolStripMenuItem plantãoToolStripMenuItem;
         private ToolStripMenuItem consultarPlantãoToolStripMenuItem;
         private ToolStripMenuItem avaliaçãoToolStripMenuItem;
+        private Button btnTeste;
     }
 }
