@@ -11,7 +11,6 @@ namespace GestaoCuidadores.DataBase
 
             return new SqlConnection(connectionString);
 
-
         }
     }
 }
