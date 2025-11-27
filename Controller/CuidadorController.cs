@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GestaoCuidadores.Repositories;
+using GestaoCuidadores.View;
+
 
 namespace GestaoCuidadores.Controller
 {
@@ -27,6 +29,7 @@ namespace GestaoCuidadores.Controller
             catch (Exception ex)
             {
                 _frmCadastroCuidador.ExibirMensagem("Erro ao listar cuidadores: " + ex.Message);
+
             }
         }
     }

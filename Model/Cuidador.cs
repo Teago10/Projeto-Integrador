@@ -14,7 +14,7 @@ namespace GestaoCuidadores.Model
         public string? CPF { get; set; }
         public string? Qualificacao { get; set; }
         public string? Endereco { get; set; }
-        public string? AvaliacaoMedia { get; set; }
+        public float? AvaliacaoMedia { get; set; }
         public string? Rua { get; set; }
         public string?  Numero { get; set; }
         public string? Complemento { get; set; }

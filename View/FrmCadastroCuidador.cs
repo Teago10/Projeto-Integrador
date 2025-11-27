@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestaoCuidadores.Controller;
+using GestaoCuidadores.Model;
 
 namespace GestaoCuidadores.View
 {
@@ -35,13 +36,10 @@ namespace GestaoCuidadores.View
             MessageBox.Show(mensagem);
         }
 
-        public void ExibirCuidadores(List<GestaoCuidadores.Model.Cuidador> cuidadores)
+        public void ExibirCuidadores(List<Cuidador> cuidadores)
         {
-            dgvListaCuidador.Rows.Clear();
-            foreach (var cuidador in cuidadores)
-            {
-                dgvListaCuidador.DataSource = cuidadores;
-            }
+            dgvListaCuidador.DataSource = null;
+            dgvListaCuidador.DataSource = cuidadores;
         }
     }
 }

@@ -35,7 +35,7 @@ namespace GestaoCuidadores.Repositories
                                 CPF = linhas["cpf"].ToString(),
                                 Qualificacao = linhas["qualificacao"].ToString(),
                                 Endereco = linhas["endereco"].ToString(),
-                                AvaliacaoMedia = linhas["avaliacao_media"].ToString(),
+                                AvaliacaoMedia = Convert.ToSingle(linhas["avaliacao_media"]),
                                 Rua = linhas["rua"].ToString(),
                                 Numero = linhas["numero"].ToString(),
                                 Complemento = linhas["complemento"].ToString(),
