@@ -413,6 +413,7 @@
             Controls.Add(grbDadosCuidador);
             Name = "FrmCadastroCuidador";
             Text = "Cadastro Cuidador";
+            Load += FrmCadastroCuidador_Load;
             grbDadosCuidador.ResumeLayout(false);
             grbDadosCuidador.PerformLayout();
             grbDadosEndereco.ResumeLayout(false);

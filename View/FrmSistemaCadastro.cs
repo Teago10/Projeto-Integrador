@@ -3,9 +3,9 @@ using Microsoft.Data.SqlClient;
 
 namespace GestaoCuidadores
 {
-    public partial class FrmSistemaCadastro : Form
+    public partial class FrmCadastroCuidador : Form
     {
-        public FrmSistemaCadastro()
+        public FrmCadastroCuidador()
         {
             InitializeComponent();
         }
@@ -17,19 +17,25 @@ namespace GestaoCuidadores
 
         private void btnTeste_Click(object sender, EventArgs e)
         {
-           try
-           {
-               using (SqlConnection conexao = ConexaoDB.GetConexao())
-               {
-                   conexao.Open();
-                   MessageBox.Show("Conexão Realizada com Sucesso!");
-               }
-           }
-           catch (Exception ex)
-           {
-               MessageBox.Show("Erro ao conectar:" + ex.Message);
-           }
-        
+            try
+            {
+                using (SqlConnection conexao = ConexaoDB.GetConexao())
+                {
+                    conexao.Open();
+                    MessageBox.Show("Conexão Realizada com Sucesso!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao conectar:" + ex.Message);
+            }
+
+        }
+
+        private void cuidadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCadastroCuidador frmCadastroCuidador = new FrmCadastroCuidador();
+            frmCadastroCuidador.ShowDialog();
         }
     }
 }
