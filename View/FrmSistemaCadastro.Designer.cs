@@ -1,6 +1,6 @@
 ﻿namespace GestaoCuidadores
 {
-    partial class FrmCadastroCuidador
+    partial class FrmSistemaCadastro
     {
         /// <summary>
         ///  Required designer variable.
@@ -63,33 +63,33 @@
             // responsavelToolStripMenuItem
             // 
             responsavelToolStripMenuItem.Name = "responsavelToolStripMenuItem";
-            responsavelToolStripMenuItem.Size = new Size(180, 22);
+            responsavelToolStripMenuItem.Size = new Size(139, 22);
             responsavelToolStripMenuItem.Text = "Responsável";
             // 
             // cuidadorToolStripMenuItem
             // 
             cuidadorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { disponibilidadeToolStripMenuItem });
             cuidadorToolStripMenuItem.Name = "cuidadorToolStripMenuItem";
-            cuidadorToolStripMenuItem.Size = new Size(180, 22);
-            cuidadorToolStripMenuItem.Text = "Cuidador";
+            cuidadorToolStripMenuItem.Size = new Size(139, 22);
+            cuidadorToolStripMenuItem.Text = "Cuidadores";
             cuidadorToolStripMenuItem.Click += cuidadorToolStripMenuItem_Click;
             // 
             // disponibilidadeToolStripMenuItem
             // 
             disponibilidadeToolStripMenuItem.Name = "disponibilidadeToolStripMenuItem";
-            disponibilidadeToolStripMenuItem.Size = new Size(180, 22);
+            disponibilidadeToolStripMenuItem.Size = new Size(156, 22);
             disponibilidadeToolStripMenuItem.Text = "Disponibilidade";
             // 
             // pacienteToolStripMenuItem
             // 
             pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
-            pacienteToolStripMenuItem.Size = new Size(180, 22);
+            pacienteToolStripMenuItem.Size = new Size(139, 22);
             pacienteToolStripMenuItem.Text = "Paciente";
             // 
             // avaliaçãoToolStripMenuItem
             // 
             avaliaçãoToolStripMenuItem.Name = "avaliaçãoToolStripMenuItem";
-            avaliaçãoToolStripMenuItem.Size = new Size(180, 22);
+            avaliaçãoToolStripMenuItem.Size = new Size(139, 22);
             avaliaçãoToolStripMenuItem.Text = "Avaliação";
             // 
             // atendimentoToolStripMenuItem
@@ -135,7 +135,7 @@
             btnTeste.UseVisualStyleBackColor = true;
             btnTeste.Click += btnTeste_Click;
             // 
-            // FrmCadastroCuidador
+            // FrmSistemaCadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -143,7 +143,7 @@
             Controls.Add(btnTeste);
             Controls.Add(menuSistemaCadastro);
             MainMenuStrip = menuSistemaCadastro;
-            Name = "FrmCadastroCuidador";
+            Name = "FrmSistemaCadastro";
             Text = "Sistema de Cadastro";
             menuSistemaCadastro.ResumeLayout(false);
             menuSistemaCadastro.PerformLayout();

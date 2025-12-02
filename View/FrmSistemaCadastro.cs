@@ -1,11 +1,12 @@
 using GestaoCuidadores.DataBase;
+using GestaoCuidadores.View;
 using Microsoft.Data.SqlClient;
 
 namespace GestaoCuidadores
 {
-    public partial class FrmCadastroCuidador : Form
+    public partial class FrmSistemaCadastro : Form
     {
-        public FrmCadastroCuidador()
+        public FrmSistemaCadastro()
         {
             InitializeComponent();
         }

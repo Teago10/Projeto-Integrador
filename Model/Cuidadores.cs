@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace GestaoCuidadores.Model
 {
-    public class Cuidador
+    public class Cuidadores
     {
         public int Id { get; set; }
         public string? Nome { get; set; }
         public string? Telefone { get; set; }
         public string? CPF { get; set; }
         public string? Qualificacao { get; set; }
-        public string? Endereco { get; set; }
         public float? AvaliacaoMedia { get; set; }
         public string? Rua { get; set; }
         public string?  Numero { get; set; }

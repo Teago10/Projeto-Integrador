@@ -89,7 +89,7 @@
             grbDadosCuidador.Size = new Size(784, 136);
             grbDadosCuidador.TabIndex = 0;
             grbDadosCuidador.TabStop = false;
-            grbDadosCuidador.Text = "Dados do Cuidador";
+            grbDadosCuidador.Text = "Dados do Cuidadores";
             // 
             // lblQualificacao
             // 
@@ -103,7 +103,7 @@
             // cbxQualificacao
             // 
             cbxQualificacao.FormattingEnabled = true;
-            cbxQualificacao.Items.AddRange(new object[] { "Enfermeiro(a) Geriátrico(a)", "Enfermeiro(a)", "Cuidador de Idosos", "Médico", "Técnico de Infermagem", "Auxiliar de Enfermagem", "Cuidador infantil (para pacientes com deficiência)" });
+            cbxQualificacao.Items.AddRange(new object[] { "Enfermeiro(a) Geriátrico(a)", "Enfermeiro(a)", "Cuidadores de Idosos", "Médico", "Técnico de Infermagem", "Auxiliar de Enfermagem", "Cuidadores infantil (para pacientes com deficiência)" });
             cbxQualificacao.Location = new Point(408, 88);
             cbxQualificacao.Name = "cbxQualificacao";
             cbxQualificacao.Size = new Size(304, 23);
@@ -334,6 +334,7 @@
             btnSalvar.TabIndex = 2;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnExcluir
             // 
@@ -412,7 +413,7 @@
             Controls.Add(grbDadosEndereco);
             Controls.Add(grbDadosCuidador);
             Name = "FrmCadastroCuidador";
-            Text = "Cadastro Cuidador";
+            Text = "Cadastro Cuidadores";
             Load += FrmCadastroCuidador_Load;
             grbDadosCuidador.ResumeLayout(false);
             grbDadosCuidador.PerformLayout();
