@@ -64,7 +64,7 @@ namespace GestaoCuidadores.View
             if (!ValidarCampos(cuidador))
                 return;
 
-            if(string.IsNullOrWhiteSpace(txtCodigo.Text))
+            if (string.IsNullOrWhiteSpace(txtCodigo.Text))
             {
                 _cuidadorController.Salvar(cuidador);
             }
@@ -174,15 +174,16 @@ namespace GestaoCuidadores.View
             txtNome.ReadOnly = true;
             txtTelefone.ReadOnly = true;
             txtCPF.ReadOnly = true;
-            cbxQualificacao.Enabled = true;
+            cbxQualificacao.Enabled = false;
             txtRua.ReadOnly = true;
             txtNumero.ReadOnly = true;
             txtComplemento.ReadOnly = true;
             txtBairro.ReadOnly = true;
             txtCidade.ReadOnly = true;
-            cbxEstado.Enabled = true;
+            cbxEstado.Enabled = false;
             txtCEP.ReadOnly = true;
             txtEmail.ReadOnly = true;
+
 
             btnExcluir.Enabled = false;
             btnEditar.Enabled = false;
@@ -295,7 +296,7 @@ namespace GestaoCuidadores.View
                             return;
                         }
 
-
+                        txtRua.Text = dadosEndereco?.logradouro;
                         txtBairro.Text = dadosEndereco?.bairro;
                         txtCidade.Text = dadosEndereco?.localidade;
                         cbxEstado.Text = dadosEndereco?.uf;
@@ -315,21 +316,26 @@ namespace GestaoCuidadores.View
 
         private void txtCEP_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private async void txtCEP_Leave(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtCEP.Text))
-            {
-                await BuscarEnderecoPorCep(txtCEP.Text);
-            }
+            
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             string termo = txtPesquisar.Text.Trim();
             _cuidadorController.ListarCuidadores(termo);
+        }
+
+        private async void txtCEP_Leave_1(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtCEP.Text))
+            {
+                await BuscarEnderecoPorCep(txtCEP.Text);
+            }
         }
     }
 }

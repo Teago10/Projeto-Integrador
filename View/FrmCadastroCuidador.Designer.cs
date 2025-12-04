@@ -109,7 +109,7 @@
             cbxQualificacao.Location = new Point(408, 88);
             cbxQualificacao.Name = "cbxQualificacao";
             cbxQualificacao.Size = new Size(304, 23);
-            cbxQualificacao.TabIndex = 14;
+            cbxQualificacao.TabIndex = 6;
             // 
             // lblCPF
             // 
@@ -126,7 +126,7 @@
             txtCPF.Name = "txtCPF";
             txtCPF.ReadOnly = true;
             txtCPF.Size = new Size(170, 23);
-            txtCPF.TabIndex = 12;
+            txtCPF.TabIndex = 5;
             // 
             // lblTelefone
             // 
@@ -143,7 +143,7 @@
             txtTelefone.Name = "txtTelefone";
             txtTelefone.ReadOnly = true;
             txtTelefone.Size = new Size(170, 23);
-            txtTelefone.TabIndex = 10;
+            txtTelefone.TabIndex = 4;
             // 
             // lblEmail
             // 
@@ -160,7 +160,7 @@
             txtEmail.Name = "txtEmail";
             txtEmail.ReadOnly = true;
             txtEmail.Size = new Size(289, 23);
-            txtEmail.TabIndex = 8;
+            txtEmail.TabIndex = 3;
             // 
             // lblNome
             // 
@@ -177,7 +177,7 @@
             txtNome.Name = "txtNome";
             txtNome.ReadOnly = true;
             txtNome.Size = new Size(339, 23);
-            txtNome.TabIndex = 6;
+            txtNome.TabIndex = 2;
             // 
             // txtCodigo
             // 
@@ -185,7 +185,7 @@
             txtCodigo.Name = "txtCodigo";
             txtCodigo.ReadOnly = true;
             txtCodigo.Size = new Size(100, 23);
-            txtCodigo.TabIndex = 5;
+            txtCodigo.TabIndex = 1;
             // 
             // lblCodigo
             // 
@@ -234,7 +234,7 @@
             txtComplemento.Name = "txtComplemento";
             txtComplemento.ReadOnly = true;
             txtComplemento.Size = new Size(224, 23);
-            txtComplemento.TabIndex = 19;
+            txtComplemento.TabIndex = 11;
             // 
             // lblNumero
             // 
@@ -251,7 +251,7 @@
             txtNumero.Name = "txtNumero";
             txtNumero.ReadOnly = true;
             txtNumero.Size = new Size(120, 23);
-            txtNumero.TabIndex = 17;
+            txtNumero.TabIndex = 10;
             // 
             // cbxEstado
             // 
@@ -261,7 +261,7 @@
             cbxEstado.Location = new Point(8, 128);
             cbxEstado.Name = "cbxEstado";
             cbxEstado.Size = new Size(128, 23);
-            cbxEstado.TabIndex = 16;
+            cbxEstado.TabIndex = 13;
             // 
             // lblEstado
             // 
@@ -287,7 +287,7 @@
             txtCidade.Name = "txtCidade";
             txtCidade.ReadOnly = true;
             txtCidade.Size = new Size(298, 23);
-            txtCidade.TabIndex = 10;
+            txtCidade.TabIndex = 12;
             // 
             // lblBairro
             // 
@@ -304,7 +304,7 @@
             txtBairro.Name = "txtBairro";
             txtBairro.ReadOnly = true;
             txtBairro.Size = new Size(224, 23);
-            txtBairro.TabIndex = 8;
+            txtBairro.TabIndex = 9;
             // 
             // lblRua
             // 
@@ -321,7 +321,7 @@
             txtRua.Name = "txtRua";
             txtRua.ReadOnly = true;
             txtRua.Size = new Size(307, 23);
-            txtRua.TabIndex = 6;
+            txtRua.TabIndex = 8;
             // 
             // txtCEP
             // 
@@ -329,8 +329,9 @@
             txtCEP.Name = "txtCEP";
             txtCEP.ReadOnly = true;
             txtCEP.Size = new Size(160, 23);
-            txtCEP.TabIndex = 5;
+            txtCEP.TabIndex = 7;
             txtCEP.TextChanged += txtCEP_TextChanged;
+            txtCEP.Leave += txtCEP_Leave_1;
             // 
             // lblCEP
             // 

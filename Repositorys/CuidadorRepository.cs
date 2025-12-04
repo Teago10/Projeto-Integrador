@@ -13,7 +13,7 @@ namespace GestaoCuidadores.Repositorys
     {
         public List<Cuidadores> Listar(string termo = "") 
         {
-            var cuidadores = new List<Cuidadores>();
+            var cuidador = new List<Cuidadores>();
 
             using (var conexao = ConexaoDB.GetConexao())
             {
@@ -36,7 +36,7 @@ namespace GestaoCuidadores.Repositorys
                     {
                         while (linhas.Read())
                         {
-                            cuidadores.Add(new Cuidadores()
+                            cuidador.Add(new Cuidadores()
                             {
                                 Id = Convert.ToInt32(linhas["id_cuidador"]),
                                 Nome = linhas["nome"].ToString(),
@@ -57,15 +57,15 @@ namespace GestaoCuidadores.Repositorys
                     }
                 }
             }
-            return cuidadores;
+            return cuidador;
         }
 
         public void Inserir(Cuidadores cuidador)
         {
             using (var conexao = ConexaoDB.GetConexao())
             {
-                string sql = "INSERT INTO Cuidador (nome, telefone, cpf, qualificacao, avaliacao_media, rua, numero, complemento, bairro, cidade, estado, cep, email) " +
-                             "VALUES (@nome, @telefone, @cpf, @qualificacao,@avaliacaoMedia, @rua, @numero, @complemento, @bairro, @cidade, @estado, @cep, @email)";
+                string sql = "INSERT INTO Cuidador (nome, telefone, cpf, qualificacao, rua, numero, complemento, bairro, cidade, estado, cep, email) " +
+                             "VALUES (@nome, @telefone, @cpf, @qualificacao, @rua, @numero, @complemento, @bairro, @cidade, @estado, @cep, @email)";
                 using (var comando = new SqlCommand(sql, conexao))
                 {
                     comando.Parameters.AddWithValue("@nome", cuidador.Nome);
