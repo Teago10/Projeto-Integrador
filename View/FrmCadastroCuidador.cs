@@ -184,7 +184,6 @@ namespace GestaoCuidadores.View
             txtCEP.ReadOnly = true;
             txtEmail.ReadOnly = true;
 
-
             btnExcluir.Enabled = false;
             btnEditar.Enabled = false;
             btnCancelar.Enabled = false;
