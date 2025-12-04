@@ -20,31 +20,67 @@ namespace GestaoCuidadores.Controller
             _frmCadastroCuidador = view;
             _cuidadorRepository = new CuidadorRepository();
         }
-        public void ListarCuidadores()
+        public void ListarCuidadores(string termo = "") 
         {
             try
             {
-                var listaCuidadores = _cuidadorRepository.Listar();
+                var listaCuidadores = _cuidadorRepository.Listar(termo); 
                 _frmCadastroCuidador.ExibirCuidadores(listaCuidadores);
             }
             catch (Exception ex)
             {
-                _frmCadastroCuidador.ExibirMensagem("Erro ao listar cuidadores: " + ex.Message);
+                _frmCadastroCuidador.ExibirMensagem("Erro ao listar cuidador: " + ex.Message);
             }
         }
-        public void Salvar(Cuidadores cuidadores)
+        public void Salvar(Cuidadores cuidador)
         {
             try
             {
-                _cuidadorRepository.Inserir(cuidadores);
+                _cuidadorRepository.Inserir(cuidador);
                 _frmCadastroCuidador.ExibirMensagem("Cuidador salvo com sucesso!");
 
                 ListarCuidadores();
+
+                _frmCadastroCuidador.DesabilitarCampos();
 
             }
             catch (Exception ex)
             {
                 _frmCadastroCuidador.ExibirMensagem("Erro ao salvar cuidador: " + ex.Message);
+            }
+        }
+
+        public void Atualizar(Cuidadores cuidador)
+        {
+            try
+            {
+                _cuidadorRepository.Atualizar(cuidador);
+                _frmCadastroCuidador.ExibirMensagem("Cuidador atualizado com sucesso!");
+                
+                ListarCuidadores();
+
+                _frmCadastroCuidador.DesabilitarCampos();
+            }
+            catch (Exception ex)
+            {
+                _frmCadastroCuidador.ExibirMensagem("Erro ao atualizar cuidador: " + ex.Message);
+            }
+
+        }
+        public void Excluir(int idCuidador)
+        {
+            try
+            {
+                _cuidadorRepository.Excluir(idCuidador);
+                _frmCadastroCuidador.ExibirMensagem("Cuidador excluído com sucesso!");
+                
+                ListarCuidadores();
+
+                _frmCadastroCuidador.DesabilitarCampos();
+            }
+            catch (Exception ex)
+            {
+                _frmCadastroCuidador.ExibirMensagem("Erro ao excluir cuidador: " + ex.Message);
             }
         }
     }

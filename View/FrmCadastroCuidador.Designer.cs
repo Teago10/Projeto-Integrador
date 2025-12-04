@@ -57,13 +57,14 @@
             txtCEP = new TextBox();
             lblCEP = new Label();
             btnSalvar = new Button();
-            btnExcluir = new Button();
+            btnCancelar = new Button();
             btnNovo = new Button();
             btnEditar = new Button();
             dgvListaCuidador = new DataGridView();
             txtPesquisar = new TextBox();
             btnPesquisar = new Button();
             grbListaCuidador = new GroupBox();
+            btnExcluir = new Button();
             grbDadosCuidador.SuspendLayout();
             grbDadosEndereco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaCuidador).BeginInit();
@@ -102,6 +103,7 @@
             // 
             // cbxQualificacao
             // 
+            cbxQualificacao.Enabled = false;
             cbxQualificacao.FormattingEnabled = true;
             cbxQualificacao.Items.AddRange(new object[] { "Enfermeiro(a) Geriátrico(a)", "Enfermeiro(a)", "Cuidadores de Idosos", "Médico", "Técnico de Infermagem", "Auxiliar de Enfermagem", "Cuidadores infantil (para pacientes com deficiência)" });
             cbxQualificacao.Location = new Point(408, 88);
@@ -122,6 +124,7 @@
             // 
             txtCPF.Location = new Point(208, 88);
             txtCPF.Name = "txtCPF";
+            txtCPF.ReadOnly = true;
             txtCPF.Size = new Size(170, 23);
             txtCPF.TabIndex = 12;
             // 
@@ -138,6 +141,7 @@
             // 
             txtTelefone.Location = new Point(14, 88);
             txtTelefone.Name = "txtTelefone";
+            txtTelefone.ReadOnly = true;
             txtTelefone.Size = new Size(170, 23);
             txtTelefone.TabIndex = 10;
             // 
@@ -154,6 +158,7 @@
             // 
             txtEmail.Location = new Point(488, 33);
             txtEmail.Name = "txtEmail";
+            txtEmail.ReadOnly = true;
             txtEmail.Size = new Size(289, 23);
             txtEmail.TabIndex = 8;
             // 
@@ -170,6 +175,7 @@
             // 
             txtNome.Location = new Point(133, 34);
             txtNome.Name = "txtNome";
+            txtNome.ReadOnly = true;
             txtNome.Size = new Size(339, 23);
             txtNome.TabIndex = 6;
             // 
@@ -177,6 +183,7 @@
             // 
             txtCodigo.Location = new Point(14, 35);
             txtCodigo.Name = "txtCodigo";
+            txtCodigo.ReadOnly = true;
             txtCodigo.Size = new Size(100, 23);
             txtCodigo.TabIndex = 5;
             // 
@@ -225,6 +232,7 @@
             // 
             txtComplemento.Location = new Point(136, 80);
             txtComplemento.Name = "txtComplemento";
+            txtComplemento.ReadOnly = true;
             txtComplemento.Size = new Size(224, 23);
             txtComplemento.TabIndex = 19;
             // 
@@ -241,11 +249,13 @@
             // 
             txtNumero.Location = new Point(8, 80);
             txtNumero.Name = "txtNumero";
+            txtNumero.ReadOnly = true;
             txtNumero.Size = new Size(120, 23);
             txtNumero.TabIndex = 17;
             // 
             // cbxEstado
             // 
+            cbxEstado.Enabled = false;
             cbxEstado.FormattingEnabled = true;
             cbxEstado.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MS", "MT", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
             cbxEstado.Location = new Point(8, 128);
@@ -275,6 +285,7 @@
             // 
             txtCidade.Location = new Point(366, 80);
             txtCidade.Name = "txtCidade";
+            txtCidade.ReadOnly = true;
             txtCidade.Size = new Size(298, 23);
             txtCidade.TabIndex = 10;
             // 
@@ -291,6 +302,7 @@
             // 
             txtBairro.Location = new Point(489, 33);
             txtBairro.Name = "txtBairro";
+            txtBairro.ReadOnly = true;
             txtBairro.Size = new Size(224, 23);
             txtBairro.TabIndex = 8;
             // 
@@ -307,6 +319,7 @@
             // 
             txtRua.Location = new Point(176, 33);
             txtRua.Name = "txtRua";
+            txtRua.ReadOnly = true;
             txtRua.Size = new Size(307, 23);
             txtRua.TabIndex = 6;
             // 
@@ -314,8 +327,10 @@
             // 
             txtCEP.Location = new Point(8, 33);
             txtCEP.Name = "txtCEP";
+            txtCEP.ReadOnly = true;
             txtCEP.Size = new Size(160, 23);
             txtCEP.TabIndex = 5;
+            txtCEP.TextChanged += txtCEP_TextChanged;
             // 
             // lblCEP
             // 
@@ -328,40 +343,46 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(128, 312);
+            btnSalvar.Enabled = false;
+            btnSalvar.Location = new Point(104, 312);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(104, 24);
+            btnSalvar.Size = new Size(88, 32);
             btnSalvar.TabIndex = 2;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
             // 
-            // btnExcluir
+            // btnCancelar
             // 
-            btnExcluir.Location = new Point(352, 312);
-            btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(104, 24);
-            btnExcluir.TabIndex = 3;
-            btnExcluir.Text = "Excluir";
-            btnExcluir.UseVisualStyleBackColor = true;
+            btnCancelar.Enabled = false;
+            btnCancelar.Location = new Point(292, 312);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(88, 32);
+            btnCancelar.TabIndex = 3;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnNovo
             // 
-            btnNovo.Location = new Point(14, 312);
+            btnNovo.Location = new Point(8, 312);
             btnNovo.Name = "btnNovo";
-            btnNovo.Size = new Size(104, 24);
+            btnNovo.Size = new Size(90, 32);
             btnNovo.TabIndex = 4;
             btnNovo.Text = "Novo";
             btnNovo.UseVisualStyleBackColor = true;
+            btnNovo.Click += btnNovo_Click;
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(240, 312);
+            btnEditar.Enabled = false;
+            btnEditar.Location = new Point(197, 312);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(104, 24);
+            btnEditar.Size = new Size(88, 32);
             btnEditar.TabIndex = 5;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // dgvListaCuidador
             // 
@@ -371,22 +392,24 @@
             dgvListaCuidador.Size = new Size(765, 144);
             dgvListaCuidador.TabIndex = 6;
             dgvListaCuidador.CellContentClick += dgvListaCuidador_CellContentClick;
+            dgvListaCuidador.CellDoubleClick += dgvListaCuidador_CellDoubleClick;
             // 
             // txtPesquisar
             // 
-            txtPesquisar.Location = new Point(472, 312);
+            txtPesquisar.Location = new Point(480, 316);
             txtPesquisar.Name = "txtPesquisar";
             txtPesquisar.Size = new Size(208, 23);
             txtPesquisar.TabIndex = 20;
             // 
             // btnPesquisar
             // 
-            btnPesquisar.Location = new Point(688, 312);
+            btnPesquisar.Location = new Point(696, 312);
             btnPesquisar.Name = "btnPesquisar";
-            btnPesquisar.Size = new Size(104, 24);
+            btnPesquisar.Size = new Size(96, 32);
             btnPesquisar.TabIndex = 21;
             btnPesquisar.Text = "Pesquisar";
             btnPesquisar.UseVisualStyleBackColor = true;
+            btnPesquisar.Click += btnPesquisar_Click;
             // 
             // grbListaCuidador
             // 
@@ -398,17 +421,29 @@
             grbListaCuidador.TabStop = false;
             grbListaCuidador.Text = "Lista de Cuidadores";
             // 
+            // btnExcluir
+            // 
+            btnExcluir.Enabled = false;
+            btnExcluir.Location = new Point(386, 312);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(88, 32);
+            btnExcluir.TabIndex = 23;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
+            // 
             // FrmCadastroCuidador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(801, 518);
+            Controls.Add(btnExcluir);
             Controls.Add(grbListaCuidador);
             Controls.Add(btnPesquisar);
             Controls.Add(txtPesquisar);
             Controls.Add(btnEditar);
             Controls.Add(btnNovo);
-            Controls.Add(btnExcluir);
+            Controls.Add(btnCancelar);
             Controls.Add(btnSalvar);
             Controls.Add(grbDadosEndereco);
             Controls.Add(grbDadosCuidador);
@@ -456,12 +491,13 @@
         private Label lblComplemento;
         private TextBox txtComplemento;
         private Button btnSalvar;
-        private Button btnExcluir;
+        private Button btnCancelar;
         private Button btnNovo;
         private Button btnEditar;
         private DataGridView dgvListaCuidador;
         private TextBox txtPesquisar;
         private Button btnPesquisar;
         private GroupBox grbListaCuidador;
+        private Button btnExcluir;
     }
 }

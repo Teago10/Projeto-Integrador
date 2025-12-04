@@ -11,16 +11,25 @@ namespace GestaoCuidadores.Repositorys
 {
     public class CuidadorRepository
     {
-        public List<Cuidadores> Listar()
+        public List<Cuidadores> Listar(string termo = "") 
         {
             var cuidadores = new List<Cuidadores>();
 
             using (var conexao = ConexaoDB.GetConexao())
             {
-                string sql = "SELECT * FROM Cuidadores";
+                string sql = "SELECT * FROM Cuidador";
+
+                if (!string.IsNullOrEmpty(termo))
+                {
+                    sql = "SELECT * FROM Cuidador WHERE nome LIKE @termo or email LIKE @termo";
+                }
 
                 using (var comando = new SqlCommand(sql, conexao))
                 {
+                    if (!string.IsNullOrEmpty(termo)) // se o termo não for vazio, então adiciona o parâmetro @termo ao comando sql. Para o campo de busca
+                    {
+                        comando.Parameters.AddWithValue("@termo", "%"+termo+"%");
+                    }
                     conexao.Open();
 
                     using (var linhas = comando.ExecuteReader())
@@ -55,23 +64,64 @@ namespace GestaoCuidadores.Repositorys
         {
             using (var conexao = ConexaoDB.GetConexao())
             {
-                string sql = "INSERT INTO Cuidadores (nome, telefone, cpf, qualificacao, avaliacao_media, rua, numero, complemento, bairro, cidade, estado, cep, email) " +
-                             "VALUES (@Nome, @Telefone, @CPF, @Qualificacao,@AvaliacaoMedia, @Rua, @Numero, @Complemento, @Bairro, @Cidade, @Estado, @CEP, @Email)";
+                string sql = "INSERT INTO Cuidador (nome, telefone, cpf, qualificacao, avaliacao_media, rua, numero, complemento, bairro, cidade, estado, cep, email) " +
+                             "VALUES (@nome, @telefone, @cpf, @qualificacao,@avaliacaoMedia, @rua, @numero, @complemento, @bairro, @cidade, @estado, @cep, @email)";
                 using (var comando = new SqlCommand(sql, conexao))
                 {
-                    comando.Parameters.AddWithValue("@Nome", cuidador.Nome);
-                    comando.Parameters.AddWithValue("@Telefone", cuidador.Telefone);
-                    comando.Parameters.AddWithValue("@CPF", cuidador.CPF);
-                    comando.Parameters.AddWithValue("@Qualificacao", cuidador.Qualificacao);
-                    comando.Parameters.AddWithValue("@Rua", cuidador.Rua);
-                    comando.Parameters.AddWithValue("@Numero", cuidador.Numero);
-                    comando.Parameters.AddWithValue("@Complemento", cuidador.Complemento);
-                    comando.Parameters.AddWithValue("@Bairro", cuidador.Bairro);
-                    comando.Parameters.AddWithValue("@Cidade", cuidador.Cidade);
-                    comando.Parameters.AddWithValue("@Estado", cuidador.Estado);
-                    comando.Parameters.AddWithValue("@CEP", cuidador.CEP);
-                    comando.Parameters.AddWithValue("@Email", cuidador.Email);
+                    comando.Parameters.AddWithValue("@nome", cuidador.Nome);
+                    comando.Parameters.AddWithValue("@telefone", cuidador.Telefone);
+                    comando.Parameters.AddWithValue("@cpf", cuidador.CPF);
+                    comando.Parameters.AddWithValue("@qualificacao", cuidador.Qualificacao);
+                    comando.Parameters.AddWithValue("@rua", cuidador.Rua);
+                    comando.Parameters.AddWithValue("@numero", cuidador.Numero);
+                    comando.Parameters.AddWithValue("@complemento", cuidador.Complemento);
+                    comando.Parameters.AddWithValue("@bairro", cuidador.Bairro);
+                    comando.Parameters.AddWithValue("@cidade", cuidador.Cidade);
+                    comando.Parameters.AddWithValue("@estado", cuidador.Estado);
+                    comando.Parameters.AddWithValue("@cep", cuidador.CEP);
+                    comando.Parameters.AddWithValue("@email", cuidador.Email);
 
+                    conexao.Open();
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void Atualizar(Cuidadores cuidador)
+        {
+            using (var conexao = ConexaoDB.GetConexao())
+            {
+                string sql = "UPDATE Cuidador SET nome = @nome, telefone = @telefone, cpf = @cpf, qualificacao = @qualificacao, rua = @rua, numero = @numero, complemento = @complemento, bairro = @bairro, cidade = @cidade, estado = @estado, cep = @cep, email = @email " +
+                             "WHERE id_cuidador = @Id";
+                using (var comando = new SqlCommand(sql, conexao))
+                {
+                    comando.Parameters.AddWithValue("@Id", cuidador.Id);
+                    comando.Parameters.AddWithValue("@nome", cuidador.Nome);
+                    comando.Parameters.AddWithValue("@telefone", cuidador.Telefone);
+                    comando.Parameters.AddWithValue("@cpf", cuidador.CPF);
+                    comando.Parameters.AddWithValue("@qualificacao", cuidador.Qualificacao);
+                    comando.Parameters.AddWithValue("@rua", cuidador.Rua);
+                    comando.Parameters.AddWithValue("@numero", cuidador.Numero);
+                    comando.Parameters.AddWithValue("@complemento", cuidador.Complemento);
+                    comando.Parameters.AddWithValue("@bairro", cuidador.Bairro);
+                    comando.Parameters.AddWithValue("@cidade", cuidador.Cidade);
+                    comando.Parameters.AddWithValue("@estado", cuidador.Estado);
+                    comando.Parameters.AddWithValue("@cep", cuidador.CEP);
+                    comando.Parameters.AddWithValue("@email", cuidador.Email);
+
+                    conexao.Open();
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
+        public void Excluir(int id)
+        {
+            using (var conexao = ConexaoDB.GetConexao())
+            {
+                string sql = "DELETE FROM Cuidador WHERE id_cuidador = @Id";
+                using (var comando = new SqlCommand(sql, conexao))
+                {
+                    comando.Parameters.AddWithValue("@Id", id);
                     conexao.Open();
                     comando.ExecuteNonQuery();
                 }
