@@ -63,33 +63,33 @@
             // responsavelToolStripMenuItem
             // 
             responsavelToolStripMenuItem.Name = "responsavelToolStripMenuItem";
-            responsavelToolStripMenuItem.Size = new Size(139, 22);
+            responsavelToolStripMenuItem.Size = new Size(180, 22);
             responsavelToolStripMenuItem.Text = "Responsável";
             // 
             // cuidadorToolStripMenuItem
             // 
             cuidadorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { disponibilidadeToolStripMenuItem });
             cuidadorToolStripMenuItem.Name = "cuidadorToolStripMenuItem";
-            cuidadorToolStripMenuItem.Size = new Size(139, 22);
+            cuidadorToolStripMenuItem.Size = new Size(180, 22);
             cuidadorToolStripMenuItem.Text = "Cuidadores";
             cuidadorToolStripMenuItem.Click += cuidadorToolStripMenuItem_Click;
             // 
             // disponibilidadeToolStripMenuItem
             // 
             disponibilidadeToolStripMenuItem.Name = "disponibilidadeToolStripMenuItem";
-            disponibilidadeToolStripMenuItem.Size = new Size(156, 22);
+            disponibilidadeToolStripMenuItem.Size = new Size(180, 22);
             disponibilidadeToolStripMenuItem.Text = "Disponibilidade";
             // 
             // pacienteToolStripMenuItem
             // 
             pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
-            pacienteToolStripMenuItem.Size = new Size(139, 22);
+            pacienteToolStripMenuItem.Size = new Size(180, 22);
             pacienteToolStripMenuItem.Text = "Paciente";
             // 
             // avaliaçãoToolStripMenuItem
             // 
             avaliaçãoToolStripMenuItem.Name = "avaliaçãoToolStripMenuItem";
-            avaliaçãoToolStripMenuItem.Size = new Size(139, 22);
+            avaliaçãoToolStripMenuItem.Size = new Size(180, 22);
             avaliaçãoToolStripMenuItem.Text = "Avaliação";
             // 
             // atendimentoToolStripMenuItem
@@ -102,14 +102,14 @@
             // plantãoToolStripMenuItem
             // 
             plantãoToolStripMenuItem.Name = "plantãoToolStripMenuItem";
-            plantãoToolStripMenuItem.Size = new Size(168, 22);
-            plantãoToolStripMenuItem.Text = "Agendar Plantão";
+            plantãoToolStripMenuItem.Size = new Size(198, 22);
+            plantãoToolStripMenuItem.Text = "Novo Atendimento";
             // 
             // consultarPlantãoToolStripMenuItem
             // 
             consultarPlantãoToolStripMenuItem.Name = "consultarPlantãoToolStripMenuItem";
-            consultarPlantãoToolStripMenuItem.Size = new Size(168, 22);
-            consultarPlantãoToolStripMenuItem.Text = "Consultar Plantão";
+            consultarPlantãoToolStripMenuItem.Size = new Size(198, 22);
+            consultarPlantãoToolStripMenuItem.Text = "Consultar Atendimento";
             // 
             // sistemaToolStripMenuItem
             // 
@@ -121,7 +121,7 @@
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(93, 22);
+            sairToolStripMenuItem.Size = new Size(180, 22);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
