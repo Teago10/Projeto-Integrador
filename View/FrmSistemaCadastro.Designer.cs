@@ -77,7 +77,7 @@
             // disponibilidadeToolStripMenuItem
             // 
             disponibilidadeToolStripMenuItem.Name = "disponibilidadeToolStripMenuItem";
-            disponibilidadeToolStripMenuItem.Size = new Size(180, 22);
+            disponibilidadeToolStripMenuItem.Size = new Size(156, 22);
             disponibilidadeToolStripMenuItem.Text = "Disponibilidade";
             // 
             // pacienteToolStripMenuItem
@@ -85,6 +85,7 @@
             pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
             pacienteToolStripMenuItem.Size = new Size(180, 22);
             pacienteToolStripMenuItem.Text = "Paciente";
+            pacienteToolStripMenuItem.Click += pacienteToolStripMenuItem_Click;
             // 
             // avaliaçãoToolStripMenuItem
             // 
@@ -121,7 +122,7 @@
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(180, 22);
+            sairToolStripMenuItem.Size = new Size(93, 22);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 

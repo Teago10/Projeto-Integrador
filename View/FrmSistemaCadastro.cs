@@ -38,5 +38,11 @@ namespace GestaoCuidadores
             FrmCadastroCuidador frmCadastroCuidador = new FrmCadastroCuidador();
             frmCadastroCuidador.ShowDialog();
         }
+
+        private void pacienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCadastroPaciente frmCadastroPaciente = new FrmCadastroPaciente();
+            frmCadastroPaciente.ShowDialog();
+        }
     }
 }
