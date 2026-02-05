@@ -39,7 +39,6 @@
             plantãoToolStripMenuItem = new ToolStripMenuItem();
             consultarPlantãoToolStripMenuItem = new ToolStripMenuItem();
             sistemaToolStripMenuItem = new ToolStripMenuItem();
-            sairToolStripMenuItem = new ToolStripMenuItem();
             btnTeste = new Button();
             menuSistemaCadastro.SuspendLayout();
             SuspendLayout();
@@ -63,14 +62,14 @@
             // responsavelToolStripMenuItem
             // 
             responsavelToolStripMenuItem.Name = "responsavelToolStripMenuItem";
-            responsavelToolStripMenuItem.Size = new Size(139, 22);
+            responsavelToolStripMenuItem.Size = new Size(180, 22);
             responsavelToolStripMenuItem.Text = "Responsável";
             // 
             // cuidadorToolStripMenuItem
             // 
             cuidadorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { disponibilidadeToolStripMenuItem });
             cuidadorToolStripMenuItem.Name = "cuidadorToolStripMenuItem";
-            cuidadorToolStripMenuItem.Size = new Size(139, 22);
+            cuidadorToolStripMenuItem.Size = new Size(180, 22);
             cuidadorToolStripMenuItem.Text = "Cuidadores";
             cuidadorToolStripMenuItem.Click += cuidadorToolStripMenuItem_Click;
             // 
@@ -83,13 +82,13 @@
             // pacienteToolStripMenuItem
             // 
             pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
-            pacienteToolStripMenuItem.Size = new Size(139, 22);
+            pacienteToolStripMenuItem.Size = new Size(180, 22);
             pacienteToolStripMenuItem.Text = "Paciente";
             // 
             // avaliaçãoToolStripMenuItem
             // 
             avaliaçãoToolStripMenuItem.Name = "avaliaçãoToolStripMenuItem";
-            avaliaçãoToolStripMenuItem.Size = new Size(139, 22);
+            avaliaçãoToolStripMenuItem.Size = new Size(180, 22);
             avaliaçãoToolStripMenuItem.Text = "Avaliação";
             // 
             // atendimentoToolStripMenuItem
@@ -102,28 +101,21 @@
             // plantãoToolStripMenuItem
             // 
             plantãoToolStripMenuItem.Name = "plantãoToolStripMenuItem";
-            plantãoToolStripMenuItem.Size = new Size(168, 22);
-            plantãoToolStripMenuItem.Text = "Agendar Plantão";
+            plantãoToolStripMenuItem.Size = new Size(198, 22);
+            plantãoToolStripMenuItem.Text = "Novo Atendimento";
             // 
             // consultarPlantãoToolStripMenuItem
             // 
             consultarPlantãoToolStripMenuItem.Name = "consultarPlantãoToolStripMenuItem";
-            consultarPlantãoToolStripMenuItem.Size = new Size(168, 22);
-            consultarPlantãoToolStripMenuItem.Text = "Consultar Plantão";
+            consultarPlantãoToolStripMenuItem.Size = new Size(198, 22);
+            consultarPlantãoToolStripMenuItem.Text = "Consultar Atendimento";
+            consultarPlantãoToolStripMenuItem.Click += consultarPlantãoToolStripMenuItem_Click;
             // 
             // sistemaToolStripMenuItem
             // 
-            sistemaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { sairToolStripMenuItem });
             sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
-            sistemaToolStripMenuItem.Size = new Size(60, 20);
-            sistemaToolStripMenuItem.Text = "Sistema";
-            // 
-            // sairToolStripMenuItem
-            // 
-            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(93, 22);
-            sairToolStripMenuItem.Text = "Sair";
-            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
+            sistemaToolStripMenuItem.Size = new Size(49, 20);
+            sistemaToolStripMenuItem.Text = "Login";
             // 
             // btnTeste
             // 
@@ -145,6 +137,7 @@
             MainMenuStrip = menuSistemaCadastro;
             Name = "FrmSistemaCadastro";
             Text = "Sistema de Cadastro";
+            Load += FrmSistemaCadastro_Load;
             menuSistemaCadastro.ResumeLayout(false);
             menuSistemaCadastro.PerformLayout();
             ResumeLayout(false);
@@ -157,7 +150,6 @@
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem atendimentoToolStripMenuItem;
         private ToolStripMenuItem sistemaToolStripMenuItem;
-        private ToolStripMenuItem sairToolStripMenuItem;
         private ToolStripMenuItem responsavelToolStripMenuItem;
         private ToolStripMenuItem cuidadorToolStripMenuItem;
         private ToolStripMenuItem pacienteToolStripMenuItem;

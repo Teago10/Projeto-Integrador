@@ -38,5 +38,15 @@ namespace GestaoCuidadores
             FrmCadastroCuidador frmCadastroCuidador = new FrmCadastroCuidador();
             frmCadastroCuidador.ShowDialog();
         }
+
+        private void consultarPlantãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmSistemaCadastro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
