@@ -1,6 +1,6 @@
 ﻿namespace GestaoCuidadores
 {
-    partial class Cadastro_de_Paciente
+    partial class FrmCadastroPaciente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,61 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            cbxestados = new ComboBox();
+            cbxEstados = new ComboBox();
             lblNome = new Label();
             txtNome = new TextBox();
-            grbCadastrodepaciente = new GroupBox();
+            grbCadastrodePaciente = new GroupBox();
             lblusa_fraldas = new Label();
-            pnlusafraldas = new Panel();
-            rdbsim = new RadioButton();
-            rdbnao = new RadioButton();
+            pnlUsaFraldas = new Panel();
+            rdbSim = new RadioButton();
+            rdbNao = new RadioButton();
             txtDatadeNascimento = new TextBox();
             txtComorbidade = new TextBox();
-            txtcondicaofisica = new TextBox();
+            txtCondicaoFisica = new TextBox();
             txtMedicacao = new TextBox();
-            txthorariomedicacao = new TextBox();
+            txtHorarioMedicacao = new TextBox();
             lblDatadeNascimento = new Label();
             lblComorbidade = new Label();
-            lblcondicaofisica = new Label();
+            lblCondicaoFisica = new Label();
             lblmedicacao = new Label();
-            lblhorariomedicacao = new Label();
-            txtrua = new TextBox();
-            txtnumero = new TextBox();
-            lblnumero = new Label();
+            lblHorarioMedicacao = new Label();
+            txtRua = new TextBox();
+            txtNumero = new TextBox();
+            lblNumero = new Label();
             lblrua = new Label();
-            lblcomplemento = new Label();
+            lblComplemento = new Label();
             grbEnderecoPaciente = new GroupBox();
-            lblcep = new Label();
-            txtcep = new TextBox();
-            lblestados = new Label();
-            lblcidade = new Label();
-            txtcidade = new TextBox();
+            lblCEP = new Label();
+            txtCEP = new TextBox();
+            lblEstados = new Label();
+            lblCidade = new Label();
+            txtCidade = new TextBox();
             lblbairro = new Label();
-            txtcomplemento = new TextBox();
+            txtComplemento = new TextBox();
             txtbairro = new TextBox();
-            btnsalvar = new Button();
-            btneditar = new Button();
-            btnexcluir = new Button();
-            dgvlistadepaciente = new DataGridView();
-            btnnovo = new Button();
+            btnSalvar = new Button();
+            btnEditar = new Button();
+            btnExcluir = new Button();
+            dgvListaPacientes = new DataGridView();
+            btnNovo = new Button();
             btnPesquisar = new Button();
             txtPesquisar = new TextBox();
-            grblistadepaciente = new GroupBox();
-            grbCadastrodepaciente.SuspendLayout();
-            pnlusafraldas.SuspendLayout();
+            grbListadePaciente = new GroupBox();
+            btnCancelar = new Button();
+            grbCadastrodePaciente.SuspendLayout();
+            pnlUsaFraldas.SuspendLayout();
             grbEnderecoPaciente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvlistadepaciente).BeginInit();
-            grblistadepaciente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvListaPacientes).BeginInit();
+            grbListadePaciente.SuspendLayout();
             SuspendLayout();
             // 
-            // cbxestados
+            // cbxEstados
             // 
-            cbxestados.FormattingEnabled = true;
-            cbxestados.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MS", "MT", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
-            cbxestados.Location = new Point(424, 96);
-            cbxestados.Name = "cbxestados";
-            cbxestados.Size = new Size(121, 23);
-            cbxestados.TabIndex = 0;
+            cbxEstados.FormattingEnabled = true;
+            cbxEstados.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MS", "MT", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
+            cbxEstados.Location = new Point(424, 96);
+            cbxEstados.Name = "cbxEstados";
+            cbxEstados.Size = new Size(121, 23);
+            cbxEstados.TabIndex = 0;
             // 
             // lblNome
             // 
@@ -100,28 +101,28 @@
             txtNome.Size = new Size(264, 23);
             txtNome.TabIndex = 2;
             // 
-            // grbCadastrodepaciente
+            // grbCadastrodePaciente
             // 
-            grbCadastrodepaciente.Controls.Add(lblusa_fraldas);
-            grbCadastrodepaciente.Controls.Add(pnlusafraldas);
-            grbCadastrodepaciente.Controls.Add(txtDatadeNascimento);
-            grbCadastrodepaciente.Controls.Add(txtComorbidade);
-            grbCadastrodepaciente.Controls.Add(txtcondicaofisica);
-            grbCadastrodepaciente.Controls.Add(txtMedicacao);
-            grbCadastrodepaciente.Controls.Add(txthorariomedicacao);
-            grbCadastrodepaciente.Controls.Add(lblDatadeNascimento);
-            grbCadastrodepaciente.Controls.Add(lblComorbidade);
-            grbCadastrodepaciente.Controls.Add(lblcondicaofisica);
-            grbCadastrodepaciente.Controls.Add(lblmedicacao);
-            grbCadastrodepaciente.Controls.Add(lblhorariomedicacao);
-            grbCadastrodepaciente.Controls.Add(lblNome);
-            grbCadastrodepaciente.Controls.Add(txtNome);
-            grbCadastrodepaciente.Location = new Point(8, 16);
-            grbCadastrodepaciente.Name = "grbCadastrodepaciente";
-            grbCadastrodepaciente.Size = new Size(752, 136);
-            grbCadastrodepaciente.TabIndex = 3;
-            grbCadastrodepaciente.TabStop = false;
-            grbCadastrodepaciente.Text = "Cadastro de pacientes";
+            grbCadastrodePaciente.Controls.Add(lblusa_fraldas);
+            grbCadastrodePaciente.Controls.Add(pnlUsaFraldas);
+            grbCadastrodePaciente.Controls.Add(txtDatadeNascimento);
+            grbCadastrodePaciente.Controls.Add(txtComorbidade);
+            grbCadastrodePaciente.Controls.Add(txtCondicaoFisica);
+            grbCadastrodePaciente.Controls.Add(txtMedicacao);
+            grbCadastrodePaciente.Controls.Add(txtHorarioMedicacao);
+            grbCadastrodePaciente.Controls.Add(lblDatadeNascimento);
+            grbCadastrodePaciente.Controls.Add(lblComorbidade);
+            grbCadastrodePaciente.Controls.Add(lblCondicaoFisica);
+            grbCadastrodePaciente.Controls.Add(lblmedicacao);
+            grbCadastrodePaciente.Controls.Add(lblHorarioMedicacao);
+            grbCadastrodePaciente.Controls.Add(lblNome);
+            grbCadastrodePaciente.Controls.Add(txtNome);
+            grbCadastrodePaciente.Location = new Point(8, 16);
+            grbCadastrodePaciente.Name = "grbCadastrodePaciente";
+            grbCadastrodePaciente.Size = new Size(752, 136);
+            grbCadastrodePaciente.TabIndex = 3;
+            grbCadastrodePaciente.TabStop = false;
+            grbCadastrodePaciente.Text = "Cadastro de pacientes";
             // 
             // lblusa_fraldas
             // 
@@ -133,36 +134,36 @@
             lblusa_fraldas.Text = "Usa fralda";
             lblusa_fraldas.Click += label1_Click;
             // 
-            // pnlusafraldas
+            // pnlUsaFraldas
             // 
-            pnlusafraldas.Controls.Add(rdbsim);
-            pnlusafraldas.Controls.Add(rdbnao);
-            pnlusafraldas.Location = new Point(208, 80);
-            pnlusafraldas.Name = "pnlusafraldas";
-            pnlusafraldas.Size = new Size(112, 32);
-            pnlusafraldas.TabIndex = 21;
+            pnlUsaFraldas.Controls.Add(rdbSim);
+            pnlUsaFraldas.Controls.Add(rdbNao);
+            pnlUsaFraldas.Location = new Point(208, 80);
+            pnlUsaFraldas.Name = "pnlUsaFraldas";
+            pnlUsaFraldas.Size = new Size(112, 32);
+            pnlUsaFraldas.TabIndex = 21;
             // 
-            // rdbsim
+            // rdbSim
             // 
-            rdbsim.AutoSize = true;
-            rdbsim.Location = new Point(8, 8);
-            rdbsim.Name = "rdbsim";
-            rdbsim.Size = new Size(45, 19);
-            rdbsim.TabIndex = 18;
-            rdbsim.TabStop = true;
-            rdbsim.Text = "Sim";
-            rdbsim.UseVisualStyleBackColor = true;
+            rdbSim.AutoSize = true;
+            rdbSim.Location = new Point(8, 8);
+            rdbSim.Name = "rdbSim";
+            rdbSim.Size = new Size(45, 19);
+            rdbSim.TabIndex = 18;
+            rdbSim.TabStop = true;
+            rdbSim.Text = "Sim";
+            rdbSim.UseVisualStyleBackColor = true;
             // 
-            // rdbnao
+            // rdbNao
             // 
-            rdbnao.AutoSize = true;
-            rdbnao.Location = new Point(64, 8);
-            rdbnao.Name = "rdbnao";
-            rdbnao.Size = new Size(47, 19);
-            rdbnao.TabIndex = 19;
-            rdbnao.TabStop = true;
-            rdbnao.Text = "Não";
-            rdbnao.UseVisualStyleBackColor = true;
+            rdbNao.AutoSize = true;
+            rdbNao.Location = new Point(64, 8);
+            rdbNao.Name = "rdbNao";
+            rdbNao.Size = new Size(47, 19);
+            rdbNao.TabIndex = 19;
+            rdbNao.TabStop = true;
+            rdbNao.Text = "Não";
+            rdbNao.UseVisualStyleBackColor = true;
             // 
             // txtDatadeNascimento
             // 
@@ -178,12 +179,12 @@
             txtComorbidade.Size = new Size(264, 23);
             txtComorbidade.TabIndex = 16;
             // 
-            // txtcondicaofisica
+            // txtCondicaoFisica
             // 
-            txtcondicaofisica.Location = new Point(16, 88);
-            txtcondicaofisica.Name = "txtcondicaofisica";
-            txtcondicaofisica.Size = new Size(184, 23);
-            txtcondicaofisica.TabIndex = 15;
+            txtCondicaoFisica.Location = new Point(16, 88);
+            txtCondicaoFisica.Name = "txtCondicaoFisica";
+            txtCondicaoFisica.Size = new Size(184, 23);
+            txtCondicaoFisica.TabIndex = 15;
             // 
             // txtMedicacao
             // 
@@ -192,12 +193,12 @@
             txtMedicacao.Size = new Size(232, 23);
             txtMedicacao.TabIndex = 12;
             // 
-            // txthorariomedicacao
+            // txtHorarioMedicacao
             // 
-            txthorariomedicacao.Location = new Point(584, 88);
-            txthorariomedicacao.Name = "txthorariomedicacao";
-            txthorariomedicacao.Size = new Size(136, 23);
-            txthorariomedicacao.TabIndex = 11;
+            txtHorarioMedicacao.Location = new Point(584, 88);
+            txtHorarioMedicacao.Name = "txtHorarioMedicacao";
+            txtHorarioMedicacao.Size = new Size(136, 23);
+            txtHorarioMedicacao.TabIndex = 11;
             // 
             // lblDatadeNascimento
             // 
@@ -217,14 +218,14 @@
             lblComorbidade.TabIndex = 9;
             lblComorbidade.Text = "Comorbidade";
             // 
-            // lblcondicaofisica
+            // lblCondicaoFisica
             // 
-            lblcondicaofisica.AutoSize = true;
-            lblcondicaofisica.Location = new Point(16, 72);
-            lblcondicaofisica.Name = "lblcondicaofisica";
-            lblcondicaofisica.Size = new Size(90, 15);
-            lblcondicaofisica.TabIndex = 8;
-            lblcondicaofisica.Text = "Condição Fisica";
+            lblCondicaoFisica.AutoSize = true;
+            lblCondicaoFisica.Location = new Point(16, 72);
+            lblCondicaoFisica.Name = "lblCondicaoFisica";
+            lblCondicaoFisica.Size = new Size(90, 15);
+            lblCondicaoFisica.TabIndex = 8;
+            lblCondicaoFisica.Text = "Condição Fisica";
             // 
             // lblmedicacao
             // 
@@ -235,37 +236,37 @@
             lblmedicacao.TabIndex = 6;
             lblmedicacao.Text = "Medicação";
             // 
-            // lblhorariomedicacao
+            // lblHorarioMedicacao
             // 
-            lblhorariomedicacao.AutoSize = true;
-            lblhorariomedicacao.Location = new Point(584, 72);
-            lblhorariomedicacao.Name = "lblhorariomedicacao";
-            lblhorariomedicacao.Size = new Size(108, 15);
-            lblhorariomedicacao.TabIndex = 5;
-            lblhorariomedicacao.Text = "Horario Medicação";
+            lblHorarioMedicacao.AutoSize = true;
+            lblHorarioMedicacao.Location = new Point(584, 72);
+            lblHorarioMedicacao.Name = "lblHorarioMedicacao";
+            lblHorarioMedicacao.Size = new Size(108, 15);
+            lblHorarioMedicacao.TabIndex = 5;
+            lblHorarioMedicacao.Text = "Horario Medicação";
             // 
-            // txtrua
+            // txtRua
             // 
-            txtrua.Location = new Point(16, 48);
-            txtrua.Name = "txtrua";
-            txtrua.Size = new Size(264, 23);
-            txtrua.TabIndex = 14;
+            txtRua.Location = new Point(16, 48);
+            txtRua.Name = "txtRua";
+            txtRua.Size = new Size(264, 23);
+            txtRua.TabIndex = 14;
             // 
-            // txtnumero
+            // txtNumero
             // 
-            txtnumero.Location = new Point(296, 48);
-            txtnumero.Name = "txtnumero";
-            txtnumero.Size = new Size(80, 23);
-            txtnumero.TabIndex = 13;
+            txtNumero.Location = new Point(296, 48);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(80, 23);
+            txtNumero.TabIndex = 13;
             // 
-            // lblnumero
+            // lblNumero
             // 
-            lblnumero.AutoSize = true;
-            lblnumero.Location = new Point(296, 32);
-            lblnumero.Name = "lblnumero";
-            lblnumero.Size = new Size(51, 15);
-            lblnumero.TabIndex = 7;
-            lblnumero.Text = "Numero";
+            lblNumero.AutoSize = true;
+            lblNumero.Location = new Point(296, 32);
+            lblNumero.Name = "lblNumero";
+            lblNumero.Size = new Size(51, 15);
+            lblNumero.TabIndex = 7;
+            lblNumero.Text = "Numero";
             // 
             // lblrua
             // 
@@ -276,31 +277,31 @@
             lblrua.TabIndex = 4;
             lblrua.Text = "Rua";
             // 
-            // lblcomplemento
+            // lblComplemento
             // 
-            lblcomplemento.AutoSize = true;
-            lblcomplemento.Location = new Point(400, 32);
-            lblcomplemento.Name = "lblcomplemento";
-            lblcomplemento.Size = new Size(84, 15);
-            lblcomplemento.TabIndex = 3;
-            lblcomplemento.Text = "Complemento";
+            lblComplemento.AutoSize = true;
+            lblComplemento.Location = new Point(400, 32);
+            lblComplemento.Name = "lblComplemento";
+            lblComplemento.Size = new Size(84, 15);
+            lblComplemento.TabIndex = 3;
+            lblComplemento.Text = "Complemento";
             // 
             // grbEnderecoPaciente
             // 
-            grbEnderecoPaciente.Controls.Add(lblcep);
-            grbEnderecoPaciente.Controls.Add(txtcep);
-            grbEnderecoPaciente.Controls.Add(lblestados);
-            grbEnderecoPaciente.Controls.Add(lblcidade);
-            grbEnderecoPaciente.Controls.Add(txtcidade);
+            grbEnderecoPaciente.Controls.Add(lblCEP);
+            grbEnderecoPaciente.Controls.Add(txtCEP);
+            grbEnderecoPaciente.Controls.Add(lblEstados);
+            grbEnderecoPaciente.Controls.Add(lblCidade);
+            grbEnderecoPaciente.Controls.Add(txtCidade);
             grbEnderecoPaciente.Controls.Add(lblbairro);
-            grbEnderecoPaciente.Controls.Add(txtcomplemento);
-            grbEnderecoPaciente.Controls.Add(txtnumero);
+            grbEnderecoPaciente.Controls.Add(txtComplemento);
+            grbEnderecoPaciente.Controls.Add(txtNumero);
             grbEnderecoPaciente.Controls.Add(txtbairro);
-            grbEnderecoPaciente.Controls.Add(lblnumero);
-            grbEnderecoPaciente.Controls.Add(txtrua);
+            grbEnderecoPaciente.Controls.Add(lblNumero);
+            grbEnderecoPaciente.Controls.Add(txtRua);
             grbEnderecoPaciente.Controls.Add(lblrua);
-            grbEnderecoPaciente.Controls.Add(lblcomplemento);
-            grbEnderecoPaciente.Controls.Add(cbxestados);
+            grbEnderecoPaciente.Controls.Add(lblComplemento);
+            grbEnderecoPaciente.Controls.Add(cbxEstados);
             grbEnderecoPaciente.Location = new Point(16, 176);
             grbEnderecoPaciente.Name = "grbEnderecoPaciente";
             grbEnderecoPaciente.Size = new Size(744, 144);
@@ -308,46 +309,46 @@
             grbEnderecoPaciente.TabStop = false;
             grbEnderecoPaciente.Text = "Endereço Paciente";
             // 
-            // lblcep
+            // lblCEP
             // 
-            lblcep.AutoSize = true;
-            lblcep.Location = new Point(560, 80);
-            lblcep.Name = "lblcep";
-            lblcep.Size = new Size(28, 15);
-            lblcep.TabIndex = 22;
-            lblcep.Text = "CEP";
+            lblCEP.AutoSize = true;
+            lblCEP.Location = new Point(560, 80);
+            lblCEP.Name = "lblCEP";
+            lblCEP.Size = new Size(28, 15);
+            lblCEP.TabIndex = 22;
+            lblCEP.Text = "CEP";
             // 
-            // txtcep
+            // txtCEP
             // 
-            txtcep.Location = new Point(560, 96);
-            txtcep.Name = "txtcep";
-            txtcep.Size = new Size(120, 23);
-            txtcep.TabIndex = 21;
+            txtCEP.Location = new Point(560, 96);
+            txtCEP.Name = "txtCEP";
+            txtCEP.Size = new Size(120, 23);
+            txtCEP.TabIndex = 21;
             // 
-            // lblestados
+            // lblEstados
             // 
-            lblestados.AutoSize = true;
-            lblestados.Location = new Point(424, 80);
-            lblestados.Name = "lblestados";
-            lblestados.Size = new Size(47, 15);
-            lblestados.TabIndex = 20;
-            lblestados.Text = "Estados";
+            lblEstados.AutoSize = true;
+            lblEstados.Location = new Point(424, 80);
+            lblEstados.Name = "lblEstados";
+            lblEstados.Size = new Size(47, 15);
+            lblEstados.TabIndex = 20;
+            lblEstados.Text = "Estados";
             // 
-            // lblcidade
+            // lblCidade
             // 
-            lblcidade.AutoSize = true;
-            lblcidade.Location = new Point(248, 80);
-            lblcidade.Name = "lblcidade";
-            lblcidade.Size = new Size(44, 15);
-            lblcidade.TabIndex = 19;
-            lblcidade.Text = "Cidade";
+            lblCidade.AutoSize = true;
+            lblCidade.Location = new Point(248, 80);
+            lblCidade.Name = "lblCidade";
+            lblCidade.Size = new Size(44, 15);
+            lblCidade.TabIndex = 19;
+            lblCidade.Text = "Cidade";
             // 
-            // txtcidade
+            // txtCidade
             // 
-            txtcidade.Location = new Point(248, 96);
-            txtcidade.Name = "txtcidade";
-            txtcidade.Size = new Size(160, 23);
-            txtcidade.TabIndex = 15;
+            txtCidade.Location = new Point(248, 96);
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(160, 23);
+            txtCidade.TabIndex = 15;
             // 
             // lblbairro
             // 
@@ -358,12 +359,12 @@
             lblbairro.TabIndex = 18;
             lblbairro.Text = "Bairro";
             // 
-            // txtcomplemento
+            // txtComplemento
             // 
-            txtcomplemento.Location = new Point(400, 48);
-            txtcomplemento.Name = "txtcomplemento";
-            txtcomplemento.Size = new Size(256, 23);
-            txtcomplemento.TabIndex = 17;
+            txtComplemento.Location = new Point(400, 48);
+            txtComplemento.Name = "txtComplemento";
+            txtComplemento.Size = new Size(256, 23);
+            txtComplemento.TabIndex = 17;
             // 
             // txtbairro
             // 
@@ -372,146 +373,157 @@
             txtbairro.Size = new Size(216, 23);
             txtbairro.TabIndex = 16;
             // 
-            // btnsalvar
+            // btnSalvar
             // 
-            btnsalvar.Location = new Point(16, 328);
-            btnsalvar.Name = "btnsalvar";
-            btnsalvar.Size = new Size(112, 23);
-            btnsalvar.TabIndex = 16;
-            btnsalvar.Text = "Salvar";
-            btnsalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Location = new Point(118, 328);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(93, 34);
+            btnSalvar.TabIndex = 16;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = true;
             // 
-            // btneditar
+            // btnEditar
             // 
-            btneditar.Location = new Point(136, 328);
-            btneditar.Name = "btneditar";
-            btneditar.Size = new Size(112, 23);
-            btneditar.TabIndex = 17;
-            btneditar.Text = "Editar";
-            btneditar.UseVisualStyleBackColor = true;
+            btnEditar.Location = new Point(213, 328);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(93, 34);
+            btnEditar.TabIndex = 17;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
             // 
-            // btnexcluir
+            // btnExcluir
             // 
-            btnexcluir.Location = new Point(256, 328);
-            btnexcluir.Name = "btnexcluir";
-            btnexcluir.Size = new Size(112, 23);
-            btnexcluir.TabIndex = 18;
-            btnexcluir.Text = "Excluir";
-            btnexcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Location = new Point(402, 328);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(97, 34);
+            btnExcluir.TabIndex = 18;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // dgvlistadepaciente
+            // dgvListaPacientes
             // 
-            dgvlistadepaciente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvlistadepaciente.Location = new Point(8, 24);
-            dgvlistadepaciente.Name = "dgvlistadepaciente";
-            dgvlistadepaciente.Size = new Size(718, 125);
-            dgvlistadepaciente.TabIndex = 19;
+            dgvListaPacientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvListaPacientes.Location = new Point(8, 24);
+            dgvListaPacientes.Name = "dgvListaPacientes";
+            dgvListaPacientes.Size = new Size(718, 125);
+            dgvListaPacientes.TabIndex = 19;
             // 
-            // btnnovo
+            // btnNovo
             // 
-            btnnovo.Location = new Point(376, 328);
-            btnnovo.Name = "btnnovo";
-            btnnovo.Size = new Size(112, 23);
-            btnnovo.TabIndex = 20;
-            btnnovo.Text = "Novo";
-            btnnovo.UseVisualStyleBackColor = true;
+            btnNovo.Location = new Point(16, 328);
+            btnNovo.Name = "btnNovo";
+            btnNovo.Size = new Size(99, 34);
+            btnNovo.TabIndex = 20;
+            btnNovo.Text = "Novo";
+            btnNovo.UseVisualStyleBackColor = true;
             // 
             // btnPesquisar
             // 
-            btnPesquisar.Location = new Point(496, 328);
+            btnPesquisar.Location = new Point(670, 328);
             btnPesquisar.Name = "btnPesquisar";
-            btnPesquisar.Size = new Size(112, 23);
+            btnPesquisar.Size = new Size(92, 34);
             btnPesquisar.TabIndex = 21;
             btnPesquisar.Text = "Pesquisar";
             btnPesquisar.UseVisualStyleBackColor = true;
             // 
             // txtPesquisar
             // 
-            txtPesquisar.Location = new Point(608, 328);
+            txtPesquisar.Location = new Point(500, 334);
             txtPesquisar.Name = "txtPesquisar";
-            txtPesquisar.Size = new Size(152, 23);
+            txtPesquisar.Size = new Size(166, 23);
             txtPesquisar.TabIndex = 23;
             // 
-            // grblistadepaciente
+            // grbListadePaciente
             // 
-            grblistadepaciente.Controls.Add(dgvlistadepaciente);
-            grblistadepaciente.Location = new Point(16, 368);
-            grblistadepaciente.Name = "grblistadepaciente";
-            grblistadepaciente.Size = new Size(744, 160);
-            grblistadepaciente.TabIndex = 24;
-            grblistadepaciente.TabStop = false;
-            grblistadepaciente.Text = "Lista de Paciente";
+            grbListadePaciente.Controls.Add(dgvListaPacientes);
+            grbListadePaciente.Location = new Point(16, 368);
+            grbListadePaciente.Name = "grbListadePaciente";
+            grbListadePaciente.Size = new Size(744, 160);
+            grbListadePaciente.TabIndex = 24;
+            grbListadePaciente.TabStop = false;
+            grbListadePaciente.Text = "Lista de Paciente";
             // 
-            // Cadastro_de_Paciente
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(308, 328);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(93, 34);
+            btnCancelar.TabIndex = 25;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // FrmCadastroPaciente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(763, 537);
-            Controls.Add(grblistadepaciente);
+            ClientSize = new Size(770, 537);
+            Controls.Add(btnCancelar);
+            Controls.Add(grbListadePaciente);
             Controls.Add(txtPesquisar);
             Controls.Add(btnPesquisar);
-            Controls.Add(btnnovo);
-            Controls.Add(btnexcluir);
-            Controls.Add(btneditar);
-            Controls.Add(btnsalvar);
+            Controls.Add(btnNovo);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnEditar);
+            Controls.Add(btnSalvar);
             Controls.Add(grbEnderecoPaciente);
-            Controls.Add(grbCadastrodepaciente);
-            Name = "Cadastro_de_Paciente";
-            Text = "Cadastro_de_Paciente";
+            Controls.Add(grbCadastrodePaciente);
+            Name = "FrmCadastroPaciente";
+            Text = "Cadastro de Paciente";
             Load += Cadastro_de_Paciente_Load;
-            grbCadastrodepaciente.ResumeLayout(false);
-            grbCadastrodepaciente.PerformLayout();
-            pnlusafraldas.ResumeLayout(false);
-            pnlusafraldas.PerformLayout();
+            grbCadastrodePaciente.ResumeLayout(false);
+            grbCadastrodePaciente.PerformLayout();
+            pnlUsaFraldas.ResumeLayout(false);
+            pnlUsaFraldas.PerformLayout();
             grbEnderecoPaciente.ResumeLayout(false);
             grbEnderecoPaciente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvlistadepaciente).EndInit();
-            grblistadepaciente.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvListaPacientes).EndInit();
+            grbListadePaciente.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private ComboBox cbxestados;
+        private ComboBox cbxEstados;
         private Label lblNome;
         private TextBox txtNome;
-        private GroupBox grbCadastrodepaciente;
+        private GroupBox grbCadastrodePaciente;
         private TextBox txtDatadeNascimento;
         private TextBox txtComorbidade;
-        private TextBox txtcondicaofisica;
-        private TextBox txtrua;
-        private TextBox txtnumero;
+        private TextBox txtCondicaoFisica;
+        private TextBox txtRua;
+        private TextBox txtNumero;
         private TextBox txtMedicacao;
-        private TextBox txthorariomedicacao;
+        private TextBox txtHorarioMedicacao;
         private Label lblDatadeNascimento;
         private Label lblComorbidade;
-        private Label lblcondicaofisica;
-        private Label lblnumero;
+        private Label lblCondicaoFisica;
+        private Label lblNumero;
         private Label lblmedicacao;
-        private Label lblhorariomedicacao;
+        private Label lblHorarioMedicacao;
         private Label lblrua;
-        private Label lblcomplemento;
-        private RadioButton rdbnao;
-        private RadioButton rdbsim;
-        private Panel pnlusafraldas;
+        private Label lblComplemento;
+        private RadioButton rdbNao;
+        private RadioButton rdbSim;
+        private Panel pnlUsaFraldas;
         private Label lblusa_fraldas;
         private GroupBox grbEnderecoPaciente;
-        private Label lblestados;
-        private Label lblcidade;
+        private Label lblEstados;
+        private Label lblCidade;
         private Label lblbairro;
-        private TextBox txtcomplemento;
+        private TextBox txtComplemento;
         private TextBox txtbairro;
-        private TextBox txtcidade;
-        private Label lblcep;
-        private TextBox txtcep;
-        private Button btnsalvar;
-        private Button btneditar;
-        private Button btnexcluir;
-        private DataGridView dgvlistadepaciente;
-        private Button btnnovo;
+        private TextBox txtCidade;
+        private Label lblCEP;
+        private TextBox txtCEP;
+        private Button btnSalvar;
+        private Button btnEditar;
+        private Button btnExcluir;
+        private DataGridView dgvListaPacientes;
+        private Button btnNovo;
         private Button btnPesquisar;
         private TextBox txtPesquisar;
-        private GroupBox grblistadepaciente;
+        private GroupBox grbListadePaciente;
+        private Button btnCancelar;
     }
 }

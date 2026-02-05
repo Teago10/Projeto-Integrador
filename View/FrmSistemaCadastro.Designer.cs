@@ -84,6 +84,7 @@
             pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
             pacienteToolStripMenuItem.Size = new Size(180, 22);
             pacienteToolStripMenuItem.Text = "Paciente";
+            pacienteToolStripMenuItem.Click += pacienteToolStripMenuItem_Click;
             // 
             // avaliaçãoToolStripMenuItem
             // 
@@ -110,6 +111,8 @@
             consultarPlantãoToolStripMenuItem.Size = new Size(198, 22);
             consultarPlantãoToolStripMenuItem.Text = "Consultar Atendimento";
             consultarPlantãoToolStripMenuItem.Click += consultarPlantãoToolStripMenuItem_Click;
+            consultarPlantãoToolStripMenuItem.Size = new Size(198, 22);
+            consultarPlantãoToolStripMenuItem.Text = "Consultar Atendimento";
             // 
             // sistemaToolStripMenuItem
             // 

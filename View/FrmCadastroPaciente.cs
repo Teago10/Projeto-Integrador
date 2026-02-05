@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestaoCuidadores.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,13 @@ using System.Windows.Forms;
 
 namespace GestaoCuidadores
 {
-    public partial class Cadastro_de_Paciente : Form
+    public partial class FrmCadastroPaciente : Form
     {
-        public Cadastro_de_Paciente()
+        private PacientesController _pacientesController;
+        public FrmCadastroPaciente()
         {
             InitializeComponent();
+            _pacientesController = new PacientesController(this);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -24,7 +27,17 @@ namespace GestaoCuidadores
 
         private void Cadastro_de_Paciente_Load(object sender, EventArgs e)
         {
+            _pacientesController.ListarPacientes();
+        }
 
+        public void ExibirPacientes(object pacientes)
+        {
+            dgvListaPacientes.DataSource = pacientes;
+        }
+
+        public void ExibirMensagem(string mensagem)
+        {
+            MessageBox.Show(mensagem);
         }
     }
 }
