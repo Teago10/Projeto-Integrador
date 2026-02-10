@@ -9,7 +9,7 @@ using Microsoft.Data.SqlClient;
 
 namespace GestaoCuidadores.Repositorys
 {
-    public class CuidadorRepository
+    public class CuidadoresRepository
     {
         public List<Cuidadores> Listar(string termo = "") 
         {

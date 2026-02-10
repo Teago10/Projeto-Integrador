@@ -16,11 +16,11 @@ namespace GestaoCuidadores.View
 {
     public partial class FrmCadastroCuidador : Form
     {
-        private CuidadorController _cuidadorController;
+        private CuidadoresController _cuidadorController;
         public FrmCadastroCuidador()
         {
             InitializeComponent();
-            _cuidadorController = new CuidadorController(this);
+            _cuidadorController = new CuidadoresController(this);
         }
 
         private void dgvListaCuidador_CellContentClick(object sender, DataGridViewCellEventArgs e)

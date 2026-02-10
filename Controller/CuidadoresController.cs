@@ -10,15 +10,15 @@ using GestaoCuidadores.View;
 
 namespace GestaoCuidadores.Controller
 {
-    public class CuidadorController
+    public class CuidadoresController
     {
         private FrmCadastroCuidador _frmCadastroCuidador;
-        private CuidadorRepository _cuidadorRepository;
+        private CuidadoresRepository _cuidadorRepository;
 
-        public CuidadorController(FrmCadastroCuidador view)
+        public CuidadoresController(FrmCadastroCuidador view)
         {
             _frmCadastroCuidador = view;
-            _cuidadorRepository = new CuidadorRepository();
+            _cuidadorRepository = new CuidadoresRepository();
         }
         public void ListarCuidadores(string termo = "") 
         {
