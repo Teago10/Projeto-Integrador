@@ -311,7 +311,7 @@ namespace GestaoCuidadores.View
             {
                 ExibirMensagem($"Erro ao buscar o endereço: {ex.Message}");
             }
-        }
+        }   
 
         private void txtCEP_TextChanged(object sender, EventArgs e)
         {

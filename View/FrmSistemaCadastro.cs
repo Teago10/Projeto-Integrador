@@ -57,7 +57,8 @@ namespace GestaoCuidadores
 
         private void responsavelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmCadastroResponsavel frmCadastroResponsavel = new FrmCadastroResponsavel();
+            frmCadastroResponsavel.ShowDialog();
         }
     }
 }

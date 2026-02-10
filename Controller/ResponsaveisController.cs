@@ -25,11 +25,11 @@ namespace GestaoCuidadores.Controller
             try
             {
                 var listaResponsaveis = _responsaveisRepository.Listar(); // aqui tem que passar o termo para o método listar do repositório, para fazer a busca
-                //_frmCadastroResponsavel.ExibirResponsaveis(listaResponsaveis);
+                _frmCadastroResponsavel.ExibirResponsaveis(listaResponsaveis);
             }
             catch (Exception ex)
             {
-                //_frmCadastroResponsavel.ExibirMensagem("Erro ao listar responsáveis: " + ex.Message);
+                _frmCadastroResponsavel.ExibirMensagem("Erro ao listar responsáveis: " + ex.Message);
             }
         }
         public void Salvar(Responsaveis responsavel)
@@ -37,16 +37,16 @@ namespace GestaoCuidadores.Controller
             try
             {
                 _responsaveisRepository.Inserir(responsavel);
-                //_frmCadastroResponsavel.ExibirMensagem("Responsável salvo com sucesso!");
+                _frmCadastroResponsavel.ExibirMensagem("Responsável salvo com sucesso!");
 
                 ListarResponsaveis();
 
-                //_frmCadastroResponsavel.DesabilitarCampos();
+                _frmCadastroResponsavel.DesabilitarCampos();
 
             }
             catch (Exception ex)
             {
-                //_frmCadastroResponsavel.ExibirMensagem("Erro ao salvar responsável: " + ex.Message);
+                _frmCadastroResponsavel.ExibirMensagem("Erro ao salvar responsável: " + ex.Message);
             }
         }
 
@@ -55,13 +55,13 @@ namespace GestaoCuidadores.Controller
             try
             {
                 _responsaveisRepository.Atualizar(responsavel);
-                //_frmCadastroResponsavel.ExibirMensagem("Responsável atualizado com sucesso!");
+                _frmCadastroResponsavel.ExibirMensagem("Responsável atualizado com sucesso!");
 
                 ListarResponsaveis();
             }
             catch (Exception ex)
             {
-                //_frmCadastroResponsavel.ExibirMensagem("Erro ao atualizar responsável: " + ex.Message);
+                _frmCadastroResponsavel.ExibirMensagem("Erro ao atualizar responsável: " + ex.Message);
             }
         }
 

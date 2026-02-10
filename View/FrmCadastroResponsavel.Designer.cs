@@ -78,6 +78,7 @@
             btnExcluir.TabIndex = 32;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // grbListaCuidador
             // 
@@ -96,6 +97,7 @@
             dgvListaResponsavel.Name = "dgvListaResponsavel";
             dgvListaResponsavel.Size = new Size(765, 144);
             dgvListaResponsavel.TabIndex = 6;
+            dgvListaResponsavel.CellDoubleClick += dgvListaResponsavel_CellDoubleClick;
             // 
             // btnPesquisar
             // 
@@ -105,6 +107,7 @@
             btnPesquisar.TabIndex = 30;
             btnPesquisar.Text = "Pesquisar";
             btnPesquisar.UseVisualStyleBackColor = true;
+            btnPesquisar.Click += btnPesquisar_Click;
             // 
             // txtPesquisar
             // 
@@ -122,6 +125,7 @@
             btnEditar.TabIndex = 28;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnNovo
             // 
@@ -131,6 +135,7 @@
             btnNovo.TabIndex = 27;
             btnNovo.Text = "Novo";
             btnNovo.UseVisualStyleBackColor = true;
+            btnNovo.Click += btnNovo_Click;
             // 
             // btnCancelar
             // 
@@ -141,6 +146,7 @@
             btnCancelar.TabIndex = 26;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnSalvar
             // 
@@ -287,6 +293,7 @@
             txtCEP.ReadOnly = true;
             txtCEP.Size = new Size(160, 23);
             txtCEP.TabIndex = 7;
+            txtCEP.Leave += txtCEP_Leave_1;
             // 
             // lblCEP
             // 

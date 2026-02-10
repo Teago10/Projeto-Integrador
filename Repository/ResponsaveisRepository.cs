@@ -11,7 +11,7 @@ namespace GestaoCuidadores.Repository
 {
     public class ResponsaveisRepository
     {
-        public List<Responsaveis> Listar()
+        public List<Responsaveis> Listar(string termo = "")
         {
             var responsaveis = new List<Responsaveis>();
 
@@ -19,18 +19,18 @@ namespace GestaoCuidadores.Repository
             {
                 string sql = "select * from Responsaveis";
 
-                /*if (!string.IsNullOrEmpty())
+                if (!string.IsNullOrEmpty(termo))
                 {
                     sql = "select * from Responsaveis where nome like @termo or email like @termo";
-                }*/
+                }
 
                 using (var comando = new SqlCommand(sql, conexao))
                 {
-                    /*if (!string.IsNullOrEmpty()) // se o termo não for vazio, então adiciona o parâmetro @termo ao comando sql. Para o campo de busca
+                    if (!string.IsNullOrEmpty(termo)) // se o termo não for vazio, então adiciona o parâmetro @termo ao comando sql. Para o campo de busca
                     {
-                        comando.Parameters.AddWithValue("@termo", "%" +termo+ "%");
+                        comando.Parameters.AddWithValue("@termo", "%" + termo + "%");
                     }
-                    conexao.Open();*/
+                    conexao.Open();
 
                     using (var linhas = comando.ExecuteReader())
                     {
