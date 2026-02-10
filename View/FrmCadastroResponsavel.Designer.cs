@@ -151,6 +151,7 @@
             btnSalvar.TabIndex = 25;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // grbDadosEndereco
             // 
@@ -417,6 +418,7 @@
             Controls.Add(grbDadosEndereco);
             Name = "FrmCadastroResponsavel";
             Text = "Cadastro do Responsavel";
+            Load += FrmCadastroResponsavel_Load;
             grbListaCuidador.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvListaResponsavel).EndInit();
             grbDadosEndereco.ResumeLayout(false);
