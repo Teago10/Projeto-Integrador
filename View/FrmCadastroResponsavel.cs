@@ -208,6 +208,7 @@ namespace GestaoCuidadores.View
             {
                 int id = Convert.ToInt32(txtCodigo.Text);
                 _responsaveisController.Excluir(id);
+                LimparCampos();
             }
         }
 

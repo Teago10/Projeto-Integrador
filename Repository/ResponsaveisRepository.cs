@@ -17,11 +17,11 @@ namespace GestaoCuidadores.Repository
 
             using (var conexao = ConexaoDB.GetConexao())
             {
-                string sql = "select * from Responsaveis";
+                string sql = "select * from Responsavel";
 
                 if (!string.IsNullOrEmpty(termo))
                 {
-                    sql = "select * from Responsaveis where nome like @termo or email like @termo";
+                    sql = "select * from Responsavel where nome like @termo or email like @termo";
                 }
 
                 using (var comando = new SqlCommand(sql, conexao))
@@ -63,7 +63,7 @@ namespace GestaoCuidadores.Repository
         {
             using (var conexao = ConexaoDB.GetConexao())
             {
-                string sql = "insert into Responsaveis (nome, telefone, cpf, rua, numero, complemento, bairro, cidade, estado, cep, email) values (@nome, @telefone, @cpf, @rua, @numero, @complemento, @bairro, @cidade, @estado, @cep, @email)";
+                string sql = "insert into Responsavel (nome, telefone, cpf, rua, numero, complemento, bairro, cidade, estado, cep, email) values (@nome, @telefone, @cpf, @rua, @numero, @complemento, @bairro, @cidade, @estado, @cep, @email)";
                 using (var comando = new SqlCommand(sql, conexao))
                 {
                     comando.Parameters.AddWithValue("@nome", responsavel.Nome);
@@ -87,7 +87,7 @@ namespace GestaoCuidadores.Repository
         {
             using (var conexao = ConexaoDB.GetConexao())
             {
-                string sql = "update Responsaveis set nome = @nome, telefone = @telefone, cpf = @cpf, rua = @rua, numero = @numero, complemento = @complemento, bairro = @bairro, cidade = @cidade, estado = @estado, cep = @cep, email = @email where id_responsavel = @id";
+                string sql = "update Responsavel set nome = @nome, telefone = @telefone, cpf = @cpf, rua = @rua, numero = @numero, complemento = @complemento, bairro = @bairro, cidade = @cidade, estado = @estado, cep = @cep, email = @email where id_responsavel = @id";
                 using (var comando = new SqlCommand(sql, conexao))
                 {
                     comando.Parameters.AddWithValue("@id", responsavel.Id);
@@ -112,7 +112,7 @@ namespace GestaoCuidadores.Repository
         {
             using (var conexao = ConexaoDB.GetConexao())
             {
-                string sql = "delete from Responsaveis where id_responsavel = @id";
+                string sql = "delete from Responsavel where id_responsavel = @id";
                 using (var comando = new SqlCommand(sql, conexao))
                 {
                     comando.Parameters.AddWithValue("@id", id);

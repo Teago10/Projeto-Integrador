@@ -24,7 +24,7 @@ namespace GestaoCuidadores.Controller
         {
             try
             {
-                var listaResponsaveis = _responsaveisRepository.Listar(); // aqui tem que passar o termo para o método listar do repositório, para fazer a busca
+                var listaResponsaveis = _responsaveisRepository.Listar(termo); // aqui tem que passar o termo para o método listar do repositório, para fazer a busca
                 _frmCadastroResponsavel.ExibirResponsaveis(listaResponsaveis);
             }
             catch (Exception ex)
