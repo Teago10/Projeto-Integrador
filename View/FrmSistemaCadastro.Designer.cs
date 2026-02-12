@@ -40,12 +40,14 @@
             consultarPlantãoToolStripMenuItem = new ToolStripMenuItem();
             sistemaToolStripMenuItem = new ToolStripMenuItem();
             btnTeste = new Button();
+            relatóriosToolStripMenuItem = new ToolStripMenuItem();
+            listaDeCuidadoresToolStripMenuItem = new ToolStripMenuItem();
             menuSistemaCadastro.SuspendLayout();
             SuspendLayout();
             // 
             // menuSistemaCadastro
             // 
-            menuSistemaCadastro.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, atendimentoToolStripMenuItem, sistemaToolStripMenuItem });
+            menuSistemaCadastro.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, atendimentoToolStripMenuItem, sistemaToolStripMenuItem, relatóriosToolStripMenuItem });
             menuSistemaCadastro.Location = new Point(0, 0);
             menuSistemaCadastro.Name = "menuSistemaCadastro";
             menuSistemaCadastro.Size = new Size(800, 24);
@@ -62,7 +64,7 @@
             // responsavelToolStripMenuItem
             // 
             responsavelToolStripMenuItem.Name = "responsavelToolStripMenuItem";
-            responsavelToolStripMenuItem.Size = new Size(180, 22);
+            responsavelToolStripMenuItem.Size = new Size(139, 22);
             responsavelToolStripMenuItem.Text = "Responsável";
             responsavelToolStripMenuItem.Click += responsavelToolStripMenuItem_Click;
             // 
@@ -70,7 +72,7 @@
             // 
             cuidadorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { disponibilidadeToolStripMenuItem });
             cuidadorToolStripMenuItem.Name = "cuidadorToolStripMenuItem";
-            cuidadorToolStripMenuItem.Size = new Size(180, 22);
+            cuidadorToolStripMenuItem.Size = new Size(139, 22);
             cuidadorToolStripMenuItem.Text = "Cuidadores";
             cuidadorToolStripMenuItem.Click += cuidadorToolStripMenuItem_Click;
             // 
@@ -83,14 +85,14 @@
             // pacienteToolStripMenuItem
             // 
             pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
-            pacienteToolStripMenuItem.Size = new Size(180, 22);
+            pacienteToolStripMenuItem.Size = new Size(139, 22);
             pacienteToolStripMenuItem.Text = "Paciente";
             pacienteToolStripMenuItem.Click += pacienteToolStripMenuItem_Click;
             // 
             // avaliaçãoToolStripMenuItem
             // 
             avaliaçãoToolStripMenuItem.Name = "avaliaçãoToolStripMenuItem";
-            avaliaçãoToolStripMenuItem.Size = new Size(180, 22);
+            avaliaçãoToolStripMenuItem.Size = new Size(139, 22);
             avaliaçãoToolStripMenuItem.Text = "Avaliação";
             // 
             // atendimentoToolStripMenuItem
@@ -129,6 +131,20 @@
             btnTeste.UseVisualStyleBackColor = true;
             btnTeste.Click += btnTeste_Click;
             // 
+            // relatóriosToolStripMenuItem
+            // 
+            relatóriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { listaDeCuidadoresToolStripMenuItem });
+            relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            relatóriosToolStripMenuItem.Size = new Size(71, 20);
+            relatóriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // listaDeCuidadoresToolStripMenuItem
+            // 
+            listaDeCuidadoresToolStripMenuItem.Name = "listaDeCuidadoresToolStripMenuItem";
+            listaDeCuidadoresToolStripMenuItem.Size = new Size(180, 22);
+            listaDeCuidadoresToolStripMenuItem.Text = "Lista de Cuidadores";
+            listaDeCuidadoresToolStripMenuItem.Click += listaDeCuidadoresToolStripMenuItem_Click;
+            // 
             // FrmSistemaCadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -160,5 +176,7 @@
         private ToolStripMenuItem consultarPlantãoToolStripMenuItem;
         private ToolStripMenuItem avaliaçãoToolStripMenuItem;
         private Button btnTeste;
+        private ToolStripMenuItem relatóriosToolStripMenuItem;
+        private ToolStripMenuItem listaDeCuidadoresToolStripMenuItem;
     }
 }

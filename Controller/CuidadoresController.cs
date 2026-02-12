@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GestaoCuidadores.Model;
 using GestaoCuidadores.Repositorys;
+using GestaoCuidadores.Services;
 using GestaoCuidadores.View;
 
 
@@ -81,6 +83,28 @@ namespace GestaoCuidadores.Controller
             catch (Exception ex)
             {
                 _frmCadastroCuidador.ExibirMensagem("Erro ao excluir cuidador: " + ex.Message);
+            }
+        }
+
+        public void GerarRelatorioPDF()
+        {
+            try
+            {
+                var listaCuidadores = _cuidadorRepository.Listar();
+
+                var relatorioCuidadores = new RelatorioCuidadores();
+
+                string arquivo = relatorioCuidadores.GerarListaCuidadores(listaCuidadores);
+
+                var psi = new ProcessStartInfo(arquivo)
+                {
+                    UseShellExecute = true,
+                };
+                Process.Start(psi);
+            }
+            catch (Exception ex) 
+            {
+                ///Erro ao gerar o relatório
             }
         }
     }

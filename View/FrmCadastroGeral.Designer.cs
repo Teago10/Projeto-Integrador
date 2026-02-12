@@ -31,12 +31,10 @@
             btnEntrar = new Button();
             lblEmail = new Label();
             txtEmail = new TextBox();
-            txtCPF = new TextBox();
             txtSenha = new TextBox();
             txtConfirmacaoSenha = new TextBox();
             lblConfirmacaoSenha = new Label();
             lblSenha = new Label();
-            lblCPF = new Label();
             lblBemvindo = new Label();
             lblPossuiConta = new Label();
             lnkEntrar = new LinkLabel();
@@ -46,7 +44,7 @@
             // 
             // btnEntrar
             // 
-            btnEntrar.Location = new Point(120, 408);
+            btnEntrar.Location = new Point(112, 376);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(104, 31);
             btnEntrar.TabIndex = 0;
@@ -69,23 +67,16 @@
             txtEmail.Size = new Size(280, 23);
             txtEmail.TabIndex = 2;
             // 
-            // txtCPF
-            // 
-            txtCPF.Location = new Point(24, 152);
-            txtCPF.Name = "txtCPF";
-            txtCPF.Size = new Size(280, 23);
-            txtCPF.TabIndex = 3;
-            // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(24, 209);
+            txtSenha.Location = new Point(24, 151);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(280, 23);
             txtSenha.TabIndex = 4;
             // 
             // txtConfirmacaoSenha
             // 
-            txtConfirmacaoSenha.Location = new Point(24, 264);
+            txtConfirmacaoSenha.Location = new Point(24, 206);
             txtConfirmacaoSenha.Name = "txtConfirmacaoSenha";
             txtConfirmacaoSenha.Size = new Size(280, 23);
             txtConfirmacaoSenha.TabIndex = 5;
@@ -93,7 +84,7 @@
             // lblConfirmacaoSenha
             // 
             lblConfirmacaoSenha.AutoSize = true;
-            lblConfirmacaoSenha.Location = new Point(30, 247);
+            lblConfirmacaoSenha.Location = new Point(30, 189);
             lblConfirmacaoSenha.Name = "lblConfirmacaoSenha";
             lblConfirmacaoSenha.Size = new Size(104, 15);
             lblConfirmacaoSenha.TabIndex = 6;
@@ -102,20 +93,11 @@
             // lblSenha
             // 
             lblSenha.AutoSize = true;
-            lblSenha.Location = new Point(30, 192);
+            lblSenha.Location = new Point(30, 134);
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(42, 15);
             lblSenha.TabIndex = 7;
             lblSenha.Text = "Senha:";
-            // 
-            // lblCPF
-            // 
-            lblCPF.AutoSize = true;
-            lblCPF.Location = new Point(31, 134);
-            lblCPF.Name = "lblCPF";
-            lblCPF.Size = new Size(31, 15);
-            lblCPF.TabIndex = 8;
-            lblCPF.Text = "CPF:";
             // 
             // lblBemvindo
             // 
@@ -130,7 +112,7 @@
             // lblPossuiConta
             // 
             lblPossuiConta.AutoSize = true;
-            lblPossuiConta.Location = new Point(104, 376);
+            lblPossuiConta.Location = new Point(96, 344);
             lblPossuiConta.Name = "lblPossuiConta";
             lblPossuiConta.Size = new Size(95, 15);
             lblPossuiConta.TabIndex = 10;
@@ -139,7 +121,7 @@
             // lnkEntrar
             // 
             lnkEntrar.AutoSize = true;
-            lnkEntrar.Location = new Point(200, 376);
+            lnkEntrar.Location = new Point(189, 344);
             lnkEntrar.Name = "lnkEntrar";
             lnkEntrar.Size = new Size(38, 15);
             lnkEntrar.TabIndex = 11;
@@ -149,7 +131,7 @@
             // lblTipoUsuario
             // 
             lblTipoUsuario.AutoSize = true;
-            lblTipoUsuario.Location = new Point(28, 303);
+            lblTipoUsuario.Location = new Point(28, 245);
             lblTipoUsuario.Name = "lblTipoUsuario";
             lblTipoUsuario.Size = new Size(92, 15);
             lblTipoUsuario.TabIndex = 13;
@@ -159,7 +141,7 @@
             // 
             cbxTipoUsuario.FormattingEnabled = true;
             cbxTipoUsuario.Items.AddRange(new object[] { "Cuidador", "Responsável" });
-            cbxTipoUsuario.Location = new Point(24, 322);
+            cbxTipoUsuario.Location = new Point(24, 264);
             cbxTipoUsuario.Name = "cbxTipoUsuario";
             cbxTipoUsuario.Size = new Size(280, 23);
             cbxTipoUsuario.TabIndex = 14;
@@ -168,18 +150,16 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(334, 464);
+            ClientSize = new Size(334, 415);
             Controls.Add(cbxTipoUsuario);
             Controls.Add(lblTipoUsuario);
             Controls.Add(lnkEntrar);
             Controls.Add(lblPossuiConta);
             Controls.Add(lblBemvindo);
-            Controls.Add(lblCPF);
             Controls.Add(lblSenha);
             Controls.Add(lblConfirmacaoSenha);
             Controls.Add(txtConfirmacaoSenha);
             Controls.Add(txtSenha);
-            Controls.Add(txtCPF);
             Controls.Add(txtEmail);
             Controls.Add(lblEmail);
             Controls.Add(btnEntrar);
@@ -195,12 +175,10 @@
         private Button btnEntrar;
         private Label lblEmail;
         private TextBox txtEmail;
-        private TextBox txtCPF;
         private TextBox txtSenha;
         private TextBox txtConfirmacaoSenha;
         private Label lblConfirmacaoSenha;
         private Label lblSenha;
-        private Label lblCPF;
         private Label lblBemvindo;
         private Label lblPossuiConta;
         private LinkLabel lnkEntrar;

@@ -1,3 +1,4 @@
+using GestaoCuidadores.Controller;
 using GestaoCuidadores.DataBase;
 using GestaoCuidadores.View;
 using Microsoft.Data.SqlClient;
@@ -59,6 +60,24 @@ namespace GestaoCuidadores
         {
             FrmCadastroResponsavel frmCadastroResponsavel = new FrmCadastroResponsavel();
             frmCadastroResponsavel.ShowDialog();
+        }
+
+        private void listaDeCuidadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+                var cuidadoresController = new CuidadoresController(null);
+                cuidadoresController.GerarRelatorioPDF();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao processar o relatório:{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+               this.Cursor = Cursors.Default;
+            }
         }
     }
 }
