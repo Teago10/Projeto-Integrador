@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             btnEntrar = new Button();
-            textBox1 = new TextBox();
+            txtEmail = new TextBox();
             lblEmail = new Label();
             lblSenha = new Label();
             lblBemvindo = new Label();
-            textBox2 = new TextBox();
+            txtSenha = new TextBox();
             lblNaoPossuiConta = new Label();
             lnkCadastrar = new LinkLabel();
             SuspendLayout();
@@ -46,13 +46,15 @@
             btnEntrar.TabIndex = 0;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = true;
+            btnEntrar.Click += btnEntrar_Click;
             // 
-            // textBox1
+            // txtEmail
             // 
-            textBox1.Location = new Point(64, 66);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(225, 23);
-            textBox1.TabIndex = 1;
+            txtEmail.Location = new Point(64, 66);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(225, 23);
+            txtEmail.TabIndex = 1;
+            txtEmail.Text = "admin@sistema.com";
             // 
             // lblEmail
             // 
@@ -82,12 +84,14 @@
             lblBemvindo.TabIndex = 4;
             lblBemvindo.Text = "Bem-vindo";
             // 
-            // textBox2
+            // txtSenha
             // 
-            textBox2.Location = new Point(64, 117);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(225, 23);
-            textBox2.TabIndex = 5;
+            txtSenha.Location = new Point(64, 117);
+            txtSenha.Name = "txtSenha";
+            txtSenha.Size = new Size(225, 23);
+            txtSenha.TabIndex = 5;
+            txtSenha.Text = "admin123";
+            txtSenha.UseSystemPasswordChar = true;
             // 
             // lblNaoPossuiConta
             // 
@@ -107,6 +111,7 @@
             lnkCadastrar.TabIndex = 7;
             lnkCadastrar.TabStop = true;
             lnkCadastrar.Text = "Cadastrar";
+            lnkCadastrar.LinkClicked += lnkCadastrar_LinkClicked;
             // 
             // FrmLogin
             // 
@@ -115,11 +120,11 @@
             ClientSize = new Size(324, 249);
             Controls.Add(lnkCadastrar);
             Controls.Add(lblNaoPossuiConta);
-            Controls.Add(textBox2);
+            Controls.Add(txtSenha);
             Controls.Add(lblBemvindo);
             Controls.Add(lblSenha);
             Controls.Add(lblEmail);
-            Controls.Add(textBox1);
+            Controls.Add(txtEmail);
             Controls.Add(btnEntrar);
             Name = "FrmLogin";
             Text = "Tela de Login";
@@ -130,11 +135,11 @@
         #endregion
 
         private Button btnEntrar;
-        private TextBox textBox1;
+        private TextBox txtEmail;
         private Label lblEmail;
         private Label lblSenha;
         private Label lblBemvindo;
-        private TextBox textBox2;
+        private TextBox txtSenha;
         private Label lblNaoPossuiConta;
         private LinkLabel lnkCadastrar;
     }
