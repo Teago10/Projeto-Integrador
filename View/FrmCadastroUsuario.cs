@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestaoCuidadores.View
 {
-    public partial class FrmCadastroGeral : Form
+    public partial class FrmCadastroUsuario : Form
     {
-        public FrmCadastroGeral()
+        public FrmCadastroUsuario()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace GestaoCuidadores.View
 {
-    partial class FrmCadastroGeral
+    partial class FrmCadastroUsuario
     {
         /// <summary>
         /// Required designer variable.

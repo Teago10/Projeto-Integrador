@@ -17,7 +17,7 @@ namespace GestaoCuidadores.Repository
 
             using (var conexao = ConexaoDB.GetConexao())
             {
-                string sql = "select * from usuario"; // corrigido 'slect' para 'select' e nome da tabela em minúsculo
+                string sql = "select * from Usuario"; 
 
                 using (var comando = new SqlCommand(sql, conexao))
                 {
@@ -33,7 +33,7 @@ namespace GestaoCuidadores.Repository
                                 Nome = linhas["nome"].ToString(),
                                 Email = linhas["email"].ToString(),
                                 Senha = linhas["senha"].ToString(),
-                                TipoUsuario = linhas["tipousuario"].ToString() // campo em minúsculo
+                                TipoUsuario = linhas["tipoUsuario"].ToString() 
                             });
                         }
                     }
@@ -47,13 +47,13 @@ namespace GestaoCuidadores.Repository
         {
             using (var conexao = ConexaoDB.GetConexao())
             {
-                string sql = "insert into usuario (nome, email, senha, tipousuario) values (@nome, @email, @senha, @tipousuario)";
+                string sql = "insert into Usuario (nome, email, senha, tipousuario) values (@nome, @email, @senha, @tipousuario)";
                 using (var comando = new SqlCommand(sql, conexao))
                 {
                     comando.Parameters.AddWithValue("@nome", usuario.Nome);
                     comando.Parameters.AddWithValue("@email", usuario.Email);
                     comando.Parameters.AddWithValue("@senha", usuario.Senha);
-                    comando.Parameters.AddWithValue("@tipousuario", usuario.TipoUsuario);
+                    comando.Parameters.AddWithValue("@tipoUsuario", usuario.TipoUsuario);
                     conexao.Open();
                     comando.ExecuteNonQuery();
                 }
@@ -64,14 +64,14 @@ namespace GestaoCuidadores.Repository
         {
             using (var conexao = ConexaoDB.GetConexao())
             {
-                string sql = "update usuario set nome = @nome, email = @email, senha = @senha, tipousuario = @tipousuario where id_usuario = @id_usuario";
+                string sql = "update Usuario set nome = @nome, email = @email, senha = @senha, tipousuario = @tipousuario where id_usuario = @id_usuario";
                 using (var comando = new SqlCommand(sql, conexao))
                 {
                     comando.Parameters.AddWithValue("@id_usuario", usuario.Id);
                     comando.Parameters.AddWithValue("@nome", usuario.Nome);
                     comando.Parameters.AddWithValue("@email", usuario.Email);
                     comando.Parameters.AddWithValue("@senha", usuario.Senha);
-                    comando.Parameters.AddWithValue("@tipousuario", usuario.TipoUsuario);
+                    comando.Parameters.AddWithValue("@tipoUsuario", usuario.TipoUsuario);
 
                     conexao.Open();
                     comando.ExecuteNonQuery();
@@ -83,7 +83,7 @@ namespace GestaoCuidadores.Repository
         {
             using (var conexao = ConexaoDB.GetConexao())
             {
-                string sql = "delete from usuario where id_usuario = @id_usuario";
+                string sql = "delete from Usuario where id_usuario = @id_usuario";
                 using (var comando = new SqlCommand(sql, conexao))
                 {
                     comando.Parameters.AddWithValue("@id_usuario", id);
@@ -97,24 +97,28 @@ namespace GestaoCuidadores.Repository
         {
             using (var conexao = ConexaoDB.GetConexao())
             {
-                string sql = "select * from usuario where email = @email and senha = @senha";
+                string sql = "select * from Usuario " +
+                             "where email = @email and" +
+                             " senha = @senha";
 
                 using (var comando = new SqlCommand(sql, conexao))
                 {
                     comando.Parameters.AddWithValue("@email", email);
                     comando.Parameters.AddWithValue("@senha", senha);
+
                     conexao.Open();
-                    using (var leitor = comando.ExecuteReader())
+
+                    using (var linha = comando.ExecuteReader())
                     {
-                        if (leitor.Read())
+                        if (linha.Read())
                         {
                             return new Usuarios()
                             {
-                                Id = Convert.ToInt32(leitor["id_usuario"]),
-                                Nome = leitor["nome"].ToString(),
-                                Email = leitor["email"].ToString(),
-                                Senha = leitor["senha"].ToString(),
-                                TipoUsuario = leitor["tipousuario"].ToString()
+                                Id = Convert.ToInt32(linha["id_usuario"]),
+                                Nome = linha["nome"].ToString(),
+                                Email = linha["email"].ToString(),
+                                Senha = linha["senha"].ToString(),
+                                TipoUsuario = linha["tipoUsuario"].ToString()
                             };
                         }
                     }
