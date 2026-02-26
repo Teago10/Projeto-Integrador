@@ -107,10 +107,10 @@
             lnkCadastrar.AutoSize = true;
             lnkCadastrar.Location = new Point(168, 184);
             lnkCadastrar.Name = "lnkCadastrar";
-            lnkCadastrar.Size = new Size(57, 15);
+            lnkCadastrar.Size = new Size(73, 15);
             lnkCadastrar.TabIndex = 7;
             lnkCadastrar.TabStop = true;
-            lnkCadastrar.Text = "Cadastrar";
+            lnkCadastrar.Text = "Cadastrar-se";
             lnkCadastrar.LinkClicked += lnkCadastrar_LinkClicked;
             // 
             // FrmLogin
@@ -127,6 +127,7 @@
             Controls.Add(txtEmail);
             Controls.Add(btnEntrar);
             Name = "FrmLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Tela de Login";
             ResumeLayout(false);
             PerformLayout();

@@ -39,9 +39,9 @@
             plantãoToolStripMenuItem = new ToolStripMenuItem();
             consultarPlantãoToolStripMenuItem = new ToolStripMenuItem();
             sistemaToolStripMenuItem = new ToolStripMenuItem();
-            btnTeste = new Button();
             relatóriosToolStripMenuItem = new ToolStripMenuItem();
             listaDeCuidadoresToolStripMenuItem = new ToolStripMenuItem();
+            btnTeste = new Button();
             menuSistemaCadastro.SuspendLayout();
             SuspendLayout();
             // 
@@ -121,16 +121,6 @@
             sistemaToolStripMenuItem.Size = new Size(49, 20);
             sistemaToolStripMenuItem.Text = "Login";
             // 
-            // btnTeste
-            // 
-            btnTeste.Location = new Point(648, 408);
-            btnTeste.Name = "btnTeste";
-            btnTeste.Size = new Size(112, 23);
-            btnTeste.TabIndex = 1;
-            btnTeste.Text = "Teste de Conexão";
-            btnTeste.UseVisualStyleBackColor = true;
-            btnTeste.Click += btnTeste_Click;
-            // 
             // relatóriosToolStripMenuItem
             // 
             relatóriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { listaDeCuidadoresToolStripMenuItem });
@@ -141,9 +131,19 @@
             // listaDeCuidadoresToolStripMenuItem
             // 
             listaDeCuidadoresToolStripMenuItem.Name = "listaDeCuidadoresToolStripMenuItem";
-            listaDeCuidadoresToolStripMenuItem.Size = new Size(180, 22);
+            listaDeCuidadoresToolStripMenuItem.Size = new Size(177, 22);
             listaDeCuidadoresToolStripMenuItem.Text = "Lista de Cuidadores";
             listaDeCuidadoresToolStripMenuItem.Click += listaDeCuidadoresToolStripMenuItem_Click;
+            // 
+            // btnTeste
+            // 
+            btnTeste.Location = new Point(648, 408);
+            btnTeste.Name = "btnTeste";
+            btnTeste.Size = new Size(112, 23);
+            btnTeste.TabIndex = 1;
+            btnTeste.Text = "Teste de Conexão";
+            btnTeste.UseVisualStyleBackColor = true;
+            btnTeste.Click += btnTeste_Click;
             // 
             // FrmSistemaCadastro
             // 
@@ -154,7 +154,7 @@
             Controls.Add(menuSistemaCadastro);
             MainMenuStrip = menuSistemaCadastro;
             Name = "FrmSistemaCadastro";
-            Text = "Sistema de Cadastro";
+            Text = " Vittale";
             Load += FrmSistemaCadastro_Load;
             menuSistemaCadastro.ResumeLayout(false);
             menuSistemaCadastro.PerformLayout();

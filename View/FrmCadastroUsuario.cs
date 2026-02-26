@@ -21,5 +21,13 @@ namespace GestaoCuidadores.View
         {
 
         }
+
+        private void lnkEntrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmLogin login = new FrmLogin();
+            login.Show();
+
+            this.Hide();
+        }
     }
 }

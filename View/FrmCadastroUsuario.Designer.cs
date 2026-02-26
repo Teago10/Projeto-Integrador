@@ -44,7 +44,7 @@
             // 
             // btnEntrar
             // 
-            btnEntrar.Location = new Point(112, 376);
+            btnEntrar.Location = new Point(112, 368);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(104, 31);
             btnEntrar.TabIndex = 0;
@@ -103,7 +103,7 @@
             // 
             lblBemvindo.AutoSize = true;
             lblBemvindo.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBemvindo.Location = new Point(120, 24);
+            lblBemvindo.Location = new Point(112, 24);
             lblBemvindo.Name = "lblBemvindo";
             lblBemvindo.Size = new Size(118, 30);
             lblBemvindo.TabIndex = 9;
@@ -112,7 +112,7 @@
             // lblPossuiConta
             // 
             lblPossuiConta.AutoSize = true;
-            lblPossuiConta.Location = new Point(96, 344);
+            lblPossuiConta.Location = new Point(98, 344);
             lblPossuiConta.Name = "lblPossuiConta";
             lblPossuiConta.Size = new Size(95, 15);
             lblPossuiConta.TabIndex = 10;
@@ -121,12 +121,13 @@
             // lnkEntrar
             // 
             lnkEntrar.AutoSize = true;
-            lnkEntrar.Location = new Point(189, 344);
+            lnkEntrar.Location = new Point(191, 344);
             lnkEntrar.Name = "lnkEntrar";
             lnkEntrar.Size = new Size(38, 15);
             lnkEntrar.TabIndex = 11;
             lnkEntrar.TabStop = true;
             lnkEntrar.Text = "Entrar";
+            lnkEntrar.LinkClicked += lnkEntrar_LinkClicked;
             // 
             // lblTipoUsuario
             // 
@@ -146,7 +147,7 @@
             cbxTipoUsuario.Size = new Size(280, 23);
             cbxTipoUsuario.TabIndex = 14;
             // 
-            // FrmCadastroGeral
+            // FrmCadastroUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -163,7 +164,8 @@
             Controls.Add(txtEmail);
             Controls.Add(lblEmail);
             Controls.Add(btnEntrar);
-            Name = "FrmCadastroGeral";
+            Name = "FrmCadastroUsuario";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Tela de cadastro de Usuário";
             Load += FrmCadastroGeral_Load;
             ResumeLayout(false);
