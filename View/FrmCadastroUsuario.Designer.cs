@@ -40,6 +40,8 @@
             lnkEntrar = new LinkLabel();
             lblTipoUsuario = new Label();
             cbxTipoUsuario = new ComboBox();
+            txtNome = new TextBox();
+            lblNome = new Label();
             SuspendLayout();
             // 
             // btnEntrar
@@ -50,11 +52,12 @@
             btnEntrar.TabIndex = 0;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = true;
+            btnEntrar.Click += btnEntrar_Click;
             // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(31, 78);
+            lblEmail.Location = new Point(31, 102);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(44, 15);
             lblEmail.TabIndex = 1;
@@ -62,21 +65,21 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(24, 96);
+            txtEmail.Location = new Point(24, 120);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(280, 23);
             txtEmail.TabIndex = 2;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(24, 151);
+            txtSenha.Location = new Point(24, 175);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(280, 23);
             txtSenha.TabIndex = 4;
             // 
             // txtConfirmacaoSenha
             // 
-            txtConfirmacaoSenha.Location = new Point(24, 206);
+            txtConfirmacaoSenha.Location = new Point(24, 230);
             txtConfirmacaoSenha.Name = "txtConfirmacaoSenha";
             txtConfirmacaoSenha.Size = new Size(280, 23);
             txtConfirmacaoSenha.TabIndex = 5;
@@ -84,7 +87,7 @@
             // lblConfirmacaoSenha
             // 
             lblConfirmacaoSenha.AutoSize = true;
-            lblConfirmacaoSenha.Location = new Point(30, 189);
+            lblConfirmacaoSenha.Location = new Point(30, 213);
             lblConfirmacaoSenha.Name = "lblConfirmacaoSenha";
             lblConfirmacaoSenha.Size = new Size(104, 15);
             lblConfirmacaoSenha.TabIndex = 6;
@@ -93,7 +96,7 @@
             // lblSenha
             // 
             lblSenha.AutoSize = true;
-            lblSenha.Location = new Point(30, 134);
+            lblSenha.Location = new Point(30, 158);
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(42, 15);
             lblSenha.TabIndex = 7;
@@ -132,7 +135,7 @@
             // lblTipoUsuario
             // 
             lblTipoUsuario.AutoSize = true;
-            lblTipoUsuario.Location = new Point(28, 245);
+            lblTipoUsuario.Location = new Point(28, 269);
             lblTipoUsuario.Name = "lblTipoUsuario";
             lblTipoUsuario.Size = new Size(92, 15);
             lblTipoUsuario.TabIndex = 13;
@@ -142,16 +145,34 @@
             // 
             cbxTipoUsuario.FormattingEnabled = true;
             cbxTipoUsuario.Items.AddRange(new object[] { "Cuidador", "Responsável" });
-            cbxTipoUsuario.Location = new Point(24, 264);
+            cbxTipoUsuario.Location = new Point(24, 288);
             cbxTipoUsuario.Name = "cbxTipoUsuario";
             cbxTipoUsuario.Size = new Size(280, 23);
             cbxTipoUsuario.TabIndex = 14;
+            // 
+            // txtNome
+            // 
+            txtNome.Location = new Point(25, 72);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(280, 23);
+            txtNome.TabIndex = 16;
+            // 
+            // lblNome
+            // 
+            lblNome.AutoSize = true;
+            lblNome.Location = new Point(32, 54);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(43, 15);
+            lblNome.TabIndex = 15;
+            lblNome.Text = "Nome:";
             // 
             // FrmCadastroUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(334, 415);
+            Controls.Add(txtNome);
+            Controls.Add(lblNome);
             Controls.Add(cbxTipoUsuario);
             Controls.Add(lblTipoUsuario);
             Controls.Add(lnkEntrar);
@@ -186,5 +207,7 @@
         private LinkLabel lnkEntrar;
         private Label lblTipoUsuario;
         private ComboBox cbxTipoUsuario;
+        private TextBox txtNome;
+        private Label lblNome;
     }
 }
