@@ -16,5 +16,10 @@ namespace GestaoCuidadores.View
         {
             InitializeComponent();
         }
+
+        private void FrmAvalicao_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

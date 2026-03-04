@@ -76,8 +76,14 @@ namespace GestaoCuidadores
             }
             finally
             {
-               this.Cursor = Cursors.Default;
+                this.Cursor = Cursors.Default;
             }
+        }
+
+        private void avaliaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAvalicao frmAvalicao = new FrmAvalicao();
+            frmAvalicao.ShowDialog();
         }
     }
 }
