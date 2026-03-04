@@ -7,7 +7,7 @@ namespace GestaoCuidadores.DataBase
     {
         public static SqlConnection GetConexao()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["GestaoCuidadorDB"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["GestaoDeCuidadoresDB"].ConnectionString;
 
             return new SqlConnection(connectionString);
 
