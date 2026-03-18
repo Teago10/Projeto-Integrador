@@ -85,5 +85,10 @@ namespace GestaoCuidadores
             FrmAvalicao frmAvalicao = new FrmAvalicao();
             frmAvalicao.ShowDialog();
         }
+
+        private void FrmSistemaCadastro_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

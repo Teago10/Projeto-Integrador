@@ -32,5 +32,13 @@ namespace GestaoCuidadores.Controller
                 //_frmAvalicao.ExibirMensagem($"Erro ao salvar avaliação: {ex.Message}" );
             }
         }
+        public List<ResponsavelAvaliacao> ObterResponsaveis()
+        {
+            return _avaliacaoRepository.ListarResponsaveis();
+        }
+        public List<CuidadorAvaliacao> ObterCuidadores()
+        {
+            return _avaliacaoRepository.ListarCuidadores();
+        }
     }
 }

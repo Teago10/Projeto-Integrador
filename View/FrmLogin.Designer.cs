@@ -90,7 +90,7 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(225, 23);
             txtSenha.TabIndex = 5;
-            txtSenha.Text = "admin123";
+            txtSenha.Text = "123456";
             txtSenha.UseSystemPasswordChar = true;
             // 
             // lblNaoPossuiConta

@@ -96,15 +96,17 @@
             // cbxNomeResponsavel
             // 
             cbxNomeResponsavel.DisplayMember = "nome";
+            cbxNomeResponsavel.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxNomeResponsavel.FormattingEnabled = true;
             cbxNomeResponsavel.Location = new Point(31, 79);
             cbxNomeResponsavel.Name = "cbxNomeResponsavel";
             cbxNomeResponsavel.Size = new Size(306, 23);
             cbxNomeResponsavel.TabIndex = 9;
-            cbxNomeResponsavel.ValueMember = "id_Responsavel";
+            cbxNomeResponsavel.ValueMember = "id";
             // 
             // cbxNomeCuidador
             // 
+            cbxNomeCuidador.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxNomeCuidador.FormattingEnabled = true;
             cbxNomeCuidador.Location = new Point(31, 148);
             cbxNomeCuidador.Name = "cbxNomeCuidador";

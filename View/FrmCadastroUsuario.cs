@@ -63,9 +63,32 @@ namespace GestaoCuidadores.View
                 Senha = txtSenha.Text.Trim(),
                 TipoUsuario = cbxTipoUsuario.SelectedItem?.ToString()
             };
-            if(!ValidarDados(usuarios))
+            if (!ValidarDados(usuarios))
                 return;
-            
+
+            if (usuarios.Senha != txtConfirmacaoSenha.Text)
+            {
+                MessageBox.Show("As senhas não coincidem.");
+            }
+
+            if (usuarios.TipoUsuario == "Cuidador")
+            {
+                FrmCadastroCuidador telaCuidador = new FrmCadastroCuidador();
+                telaCuidador.Show();
+                this.Hide();
+            }
+            else if (usuarios.TipoUsuario == "Responsável")
+            {
+                FrmCadastroResponsavel telaResponsavel = new FrmCadastroResponsavel();
+                telaResponsavel.Show();
+                this.Hide();
+            }
+
+        }
+
+        private void FrmCadastroUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

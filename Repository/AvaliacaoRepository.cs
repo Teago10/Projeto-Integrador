@@ -11,7 +11,7 @@ namespace GestaoCuidadores.Repository
 {
     public class AvaliacaoRepository
     {
-        public void Inserir(Avaliacao avaliacao) 
+        public void Inserir(Avaliacao avaliacao)
         {
             using (var conexao = ConexaoDB.GetConexao())
             {
@@ -23,12 +23,64 @@ namespace GestaoCuidadores.Repository
                     comando.Parameters.AddWithValue("@id_Cuidador", avaliacao.Id_Cuidador);
                     comando.Parameters.AddWithValue("@nota", avaliacao.Nota);
                     comando.Parameters.AddWithValue("@comentario", avaliacao.Comentario);
-                    
+
                     conexao.Open();
                     comando.ExecuteNonQuery();
                 }
             }
         }
+        // Teste para obter o responsável pela avaliação
 
+        public List<ResponsavelAvaliacao> ListarResponsaveis()
+        {
+            List<ResponsavelAvaliacao> Aval_responsaveis = new List<ResponsavelAvaliacao>();
+            string sql = "SELECT id_Responsavel, nome FROM Responsavel;";
+            using (var conexao = ConexaoDB.GetConexao())
+            {
+                using (var comando = new SqlCommand(sql, conexao))
+                {
+                    conexao.Open();
+                    using (var reader = comando.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Aval_responsaveis.Add(new ResponsavelAvaliacao
+                            {
+                                Id = reader.GetInt32(0),
+                                Nome = reader.GetString(1)
+                            });
+                        }
+                    }
+                }
+            }
+
+            return Aval_responsaveis;
+        }
+
+        public List<CuidadorAvaliacao> ListarCuidadores()
+        {
+            List<CuidadorAvaliacao> Aval_cuidadores = new List<CuidadorAvaliacao>();
+            string sql = "SELECT id_Cuidador, nome FROM Cuidador;";
+            using (var conexao = ConexaoDB.GetConexao())
+            {
+                using (var comando = new SqlCommand(sql, conexao))
+                {
+                    conexao.Open();
+                    using (var reader = comando.ExecuteReader()) 
+                    {
+                        while (reader.Read())
+                        {
+                            Aval_cuidadores.Add(new CuidadorAvaliacao
+                            {
+                                Id = reader.GetInt32(0),
+                                Nome = reader.GetString(1)
+                            });
+                        }
+                    }
+                }
+            }
+            return Aval_cuidadores;
+
+        }
     }
 }

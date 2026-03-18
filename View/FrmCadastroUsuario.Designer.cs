@@ -137,12 +137,13 @@
             lblTipoUsuario.AutoSize = true;
             lblTipoUsuario.Location = new Point(28, 269);
             lblTipoUsuario.Name = "lblTipoUsuario";
-            lblTipoUsuario.Size = new Size(92, 15);
+            lblTipoUsuario.Size = new Size(93, 15);
             lblTipoUsuario.TabIndex = 13;
             lblTipoUsuario.Text = "Tipo de Usuário:";
             // 
             // cbxTipoUsuario
             // 
+            cbxTipoUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxTipoUsuario.FormattingEnabled = true;
             cbxTipoUsuario.Items.AddRange(new object[] { "Cuidador", "Responsável" });
             cbxTipoUsuario.Location = new Point(24, 288);
@@ -188,6 +189,7 @@
             Name = "FrmCadastroUsuario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Tela de cadastro de Usuário";
+            FormClosed += FrmCadastroUsuario_FormClosed;
             Load += FrmCadastroGeral_Load;
             ResumeLayout(false);
             PerformLayout();

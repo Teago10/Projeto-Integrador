@@ -139,7 +139,7 @@ namespace GestaoCuidadores.View
             if (string.IsNullOrWhiteSpace(cbxQualificacao.Text))
             {
                 ExibirMensagem("O campo Qualificação é obrigatório.");
-                cbxQualificacao.Focus();
+                cbxQualificacao.Focus(); 
                 return false;
             }
 

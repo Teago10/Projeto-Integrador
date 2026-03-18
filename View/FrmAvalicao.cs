@@ -24,6 +24,13 @@ namespace GestaoCuidadores.View
 
         private void FrmAvalicao_Load(object sender, EventArgs e)
         {
+            cbxNomeResponsavel.DataSource = _avaliacaoController.ObterResponsaveis();
+            cbxNomeResponsavel.DisplayMember = "Nome"; // Exibe o nome do responsável no combo box
+            cbxNomeResponsavel.ValueMember = "Id"; // Usa o Id do responsável como valor selecionado
+
+            cbxNomeCuidador.DataSource = _avaliacaoController.ObterCuidadores();
+            cbxNomeCuidador.DisplayMember = "Nome"; // Exibe o nome do cuidador no combo box
+            cbxNomeCuidador.ValueMember = "Id"; // Usa o Id do cuidador como valor selecionado
 
         }
 
