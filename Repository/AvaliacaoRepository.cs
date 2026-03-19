@@ -29,11 +29,11 @@ namespace GestaoCuidadores.Repository
                 }
             }
         }
-        // Teste para obter o responsável pela avaliação
 
-        public List<ResponsavelAvaliacao> ListarResponsaveis()
+        // Método para listar os responsáveis disponíveis para avaliação
+        public List<ResponsavelSimples> ListarResponsaveis()
         {
-            List<ResponsavelAvaliacao> Aval_responsaveis = new List<ResponsavelAvaliacao>();
+            List<ResponsavelSimples> Aval_responsaveis = new List<ResponsavelSimples>();
             string sql = "SELECT id_Responsavel, nome FROM Responsavel;";
             using (var conexao = ConexaoDB.GetConexao())
             {
@@ -44,7 +44,7 @@ namespace GestaoCuidadores.Repository
                     {
                         while (reader.Read())
                         {
-                            Aval_responsaveis.Add(new ResponsavelAvaliacao
+                            Aval_responsaveis.Add(new ResponsavelSimples
                             {
                                 Id = reader.GetInt32(0),
                                 Nome = reader.GetString(1)
@@ -57,9 +57,9 @@ namespace GestaoCuidadores.Repository
             return Aval_responsaveis;
         }
 
-        public List<CuidadorAvaliacao> ListarCuidadores()
+        public List<CuidadorSimples> ListarCuidadores()
         {
-            List<CuidadorAvaliacao> Aval_cuidadores = new List<CuidadorAvaliacao>();
+            List<CuidadorSimples> Aval_cuidadores = new List<CuidadorSimples>();
             string sql = "SELECT id_Cuidador, nome FROM Cuidador;";
             using (var conexao = ConexaoDB.GetConexao())
             {
@@ -70,7 +70,7 @@ namespace GestaoCuidadores.Repository
                     {
                         while (reader.Read())
                         {
-                            Aval_cuidadores.Add(new CuidadorAvaliacao
+                            Aval_cuidadores.Add(new CuidadorSimples
                             {
                                 Id = reader.GetInt32(0),
                                 Nome = reader.GetString(1)

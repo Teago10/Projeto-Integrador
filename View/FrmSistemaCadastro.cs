@@ -90,5 +90,11 @@ namespace GestaoCuidadores
         {
             Application.Exit();
         }
+
+        private void plantãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNovoAtendimento frmNovoAtendimento = new FrmNovoAtendimento();
+            frmNovoAtendimento.ShowDialog();
+        }
     }
 }

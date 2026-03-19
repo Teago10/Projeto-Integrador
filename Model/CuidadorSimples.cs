@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestaoCuidadores.Model
 {
-    public class CuidadorAvaliacao
+    public class CuidadorSimples
     {
         public int Id { get; set; }
         public string Nome { get; set; }

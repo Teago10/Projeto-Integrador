@@ -108,6 +108,7 @@
             plantãoToolStripMenuItem.Name = "plantãoToolStripMenuItem";
             plantãoToolStripMenuItem.Size = new Size(198, 22);
             plantãoToolStripMenuItem.Text = "Novo Atendimento";
+            plantãoToolStripMenuItem.Click += plantãoToolStripMenuItem_Click;
             // 
             // consultarPlantãoToolStripMenuItem
             // 

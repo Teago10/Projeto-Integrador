@@ -25,18 +25,18 @@ namespace GestaoCuidadores.Controller
             try
             {
                 _avaliacaoRepository.Inserir(avaliacao);
-                //_frmAvalicao.ExibirMensagem("Avaliação salva com sucesso!");
+                _frmAvalicao.ExibirMensagem("Avaliação salva com sucesso!");
             }
             catch (Exception ex)
             {
-                //_frmAvalicao.ExibirMensagem($"Erro ao salvar avaliação: {ex.Message}" );
+                _frmAvalicao.ExibirMensagem($"Erro ao salvar avaliação: {ex.Message}" );
             }
         }
-        public List<ResponsavelAvaliacao> ObterResponsaveis()
+        public List<ResponsavelSimples> ObterResponsaveis()
         {
             return _avaliacaoRepository.ListarResponsaveis();
         }
-        public List<CuidadorAvaliacao> ObterCuidadores()
+        public List<CuidadorSimples> ObterCuidadores()
         {
             return _avaliacaoRepository.ListarCuidadores();
         }
